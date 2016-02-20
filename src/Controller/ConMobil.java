@@ -12,7 +12,7 @@ import java.util.ArrayList;
  *
  * @author Nikho Sagala
  */
-public class ConMobil extends Mobil {
+public class ConMobil {
 
     private ArrayList<Mobil> listMobil;
 
@@ -49,8 +49,8 @@ public class ConMobil extends Mobil {
         }
         return null;
     }
-    
-    public ArrayList<Mobil> getList(){
+
+    public ArrayList<Mobil> getList() {
         return listMobil;
     }
 }
