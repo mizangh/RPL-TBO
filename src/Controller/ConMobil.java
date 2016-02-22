@@ -80,7 +80,49 @@ public class ConMobil {
                 }
             }
         }
+    }
 
+    public void updateMobil(Mobil m) {
+        PreparedStatement Statement = null;
+        try {
+            Statement = koneksi.prepareStatement("update mobil set jenisMobil=?, harga=? where plat=? ");
+            Statement.setString(1, m.getJenisMobil());
+            Statement.setInt(2, m.getHarga());
+            Statement.setString(3, m.getPlat());
+            Statement.executeUpdate();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        } finally {
+            if (Statement != null) {
+                try {
+
+                    Statement.close();
+                } catch (SQLException ex) {
+                    Logger.getLogger(ConMobil.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        }
+
+    }
+
+    public void deleteMobilSQL(String plat) {
+        PreparedStatement Statement = null;
+        try {
+            Statement = koneksi.prepareStatement("delete from mobil where plat=? ;");
+            Statement.setString(1, plat);
+            Statement.executeUpdate();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        } finally {
+            if (Statement != null) {
+                try {
+
+                    Statement.close();
+                } catch (SQLException ex) {
+                    Logger.getLogger(ConMobil.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        }
     }
 
 }
