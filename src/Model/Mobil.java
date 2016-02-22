@@ -10,14 +10,15 @@ package Model;
  * @author Nikho Sagala
  */
 public class Mobil {
+
     private String jenisMobil;
     private String plat;
-    private double harga;
+    private int harga;
 
     public Mobil() {
     }
 
-    public Mobil(String jenisMobil, String plat, double harga) {
+    public Mobil(String jenisMobil, String plat, int harga) {
         this.jenisMobil = jenisMobil;
         this.plat = plat;
         this.harga = harga;
@@ -39,11 +40,11 @@ public class Mobil {
         this.plat = plat;
     }
 
-    public double getHarga() {
+    public int getHarga() {
         return harga;
     }
 
-    public void setHarga(double harga) {
+    public void setHarga(int harga) {
         this.harga = harga;
     }
 }
