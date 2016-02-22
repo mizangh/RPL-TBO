@@ -17,7 +17,7 @@ public class Console {
     public static void main(String[] args) {
         //Mobil Tes
         ConMobil cM = new ConMobil();
-        cM.addMobil("Innova", "D 1234 F", 550000);
+        cM.addMobil("Innova", "D 1234 F", 300000);
         cM.updateMobilSQL(cM.getMobil("Innova"));
     }
 }

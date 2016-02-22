@@ -16,7 +16,7 @@ import java.sql.SQLException;
 public class Koneksi {
 
     private static Connection koneksi;
-
+    
     public static Connection getKoneksi() {
         if (koneksi == null) {
             MysqlDataSource dataSource = new MysqlDataSource();
