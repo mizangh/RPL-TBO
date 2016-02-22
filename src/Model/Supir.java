@@ -10,9 +10,11 @@ package Model;
  * @author Nikho Sagala
  */
 public class Supir {
+
     private String idSupir;
     private String namaSupir;
     private double hargaSupir;
+    private boolean status;
 
     public Supir() {
     }
@@ -21,6 +23,7 @@ public class Supir {
         this.idSupir = idSupir;
         this.namaSupir = namaSupir;
         this.hargaSupir = hargaSupir;
+        this.status = false;
     }
 
     public String getIdSupir() {
@@ -46,5 +49,12 @@ public class Supir {
     public void setHargaSupir(double hargaSupir) {
         this.hargaSupir = hargaSupir;
     }
-    
+
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
+
+    public boolean getStatus() {
+        return status;
+    }
 }

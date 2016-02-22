@@ -7,7 +7,6 @@ package View;
 
 import Controller.ConMobil;
 import Controller.ConSupir;
-import java.util.ArrayList;
 
 /**
  *

@@ -61,7 +61,7 @@ public class ConMobil {
         return listMobil;
     }
 
-    public void insertMobil(Mobil m) {
+    public void insertMobilSQL(Mobil m) {
         PreparedStatement Statement = null;
         try {
             Statement = koneksi.prepareStatement("insert into mobil (plat, jenisMobil, harga) values (?,?,?)");
@@ -82,7 +82,7 @@ public class ConMobil {
         }
     }
 
-    public void updateMobil(Mobil m) {
+    public void updateMobilSQL(Mobil m) {
         PreparedStatement Statement = null;
         try {
             Statement = koneksi.prepareStatement("update mobil set jenisMobil=?, harga=? where plat=? ");
@@ -102,7 +102,6 @@ public class ConMobil {
                 }
             }
         }
-
     }
 
     public void deleteMobilSQL(String plat) {
@@ -124,5 +123,4 @@ public class ConMobil {
             }
         }
     }
-
 }

@@ -14,6 +14,7 @@ public class Mobil {
     private String jenisMobil;
     private String plat;
     private int harga;
+    private boolean status;
 
     public Mobil() {
     }
@@ -22,6 +23,7 @@ public class Mobil {
         this.jenisMobil = jenisMobil;
         this.plat = plat;
         this.harga = harga;
+        this.status = false;
     }
 
     public String getJenisMobil() {
@@ -46,5 +48,13 @@ public class Mobil {
 
     public void setHarga(int harga) {
         this.harga = harga;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
+
+    public boolean getStatus() {
+        return status;
     }
 }
