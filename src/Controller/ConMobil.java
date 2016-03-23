@@ -64,10 +64,11 @@ public class ConMobil {
     public void insertMobilSQL(Mobil m) {
         PreparedStatement Statement = null;
         try {
-            Statement = koneksi.prepareStatement("insert into mobil (plat, jenisMobil, harga) values (?,?,?)");
+            Statement = koneksi.prepareStatement("insert into mobil (plat, jenisMobil, harga,Status) values (?,?,?,?)");
             Statement.setString(1, m.getPlat());
             Statement.setString(2, m.getJenisMobil());
             Statement.setInt(3, m.getHarga());
+            Statement.setBoolean(4, m.getStatus());
             Statement.executeUpdate();
         } catch (SQLException ex) {
             ex.printStackTrace();
@@ -85,10 +86,11 @@ public class ConMobil {
     public void updateMobilSQL(Mobil m) {
         PreparedStatement Statement = null;
         try {
-            Statement = koneksi.prepareStatement("update mobil set jenisMobil=?, harga=? where plat=? ");
+            Statement = koneksi.prepareStatement("update mobil set jenisMobil=?, harga=?, Status=? where plat=? ");
             Statement.setString(1, m.getJenisMobil());
             Statement.setInt(2, m.getHarga());
-            Statement.setString(3, m.getPlat());
+            Statement.setBoolean(3, true);
+            Statement.setString(4, m.getPlat());
             Statement.executeUpdate();
         } catch (SQLException ex) {
             ex.printStackTrace();
@@ -123,4 +125,5 @@ public class ConMobil {
             }
         }
     }
+
 }
