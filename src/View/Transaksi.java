@@ -27,155 +27,167 @@ public class Transaksi extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        bg_white = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        lbl_datapeminjam = new javax.swing.JLabel();
+        lbl_nopolisi = new javax.swing.JLabel();
+        txt_nopolisi = new javax.swing.JTextField();
+        lbl_namapeminjam = new javax.swing.JLabel();
+        lbl_nama = new javax.swing.JLabel();
+        lbl_ktp = new javax.swing.JLabel();
+        lbl_nohandphone = new javax.swing.JLabel();
+        lbl_noktp = new javax.swing.JLabel();
+        lbl_nohp = new javax.swing.JLabel();
+        lbl_jnsmobil = new javax.swing.JLabel();
+        lbl_jenismobil = new javax.swing.JLabel();
+        lbl_lmpeminjaman = new javax.swing.JLabel();
+        lbl_lamapemin = new javax.swing.JLabel();
+        lbl_biaya = new javax.swing.JLabel();
+        lbl_totbiaya = new javax.swing.JLabel();
+        btn_home = new javax.swing.JButton();
+        btn_submit = new javax.swing.JButton();
+        pic_formtransaksi = new javax.swing.JLabel();
+        pic_ftransaksi = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        bg_white.setBackground(new java.awt.Color(255, 255, 255));
+        bg_white.setToolTipText("");
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("D:\\Rental\\GUI\\JavaApplication10\\Icon\\form Transaksi.jpg")); // NOI18N
+        lbl_datapeminjam.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbl_datapeminjam.setText("DATA PEMINJAM");
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel8.setText("DATA PEMINJAM");
+        lbl_nopolisi.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbl_nopolisi.setText("No.Polisi/Plat");
 
-        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel9.setText("No.Polisi/Plat");
+        lbl_namapeminjam.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbl_namapeminjam.setText("Nama Peminjam");
 
-        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel11.setText("Nama Peminjam");
+        lbl_nama.setText("lbl-nama");
 
-        jLabel2.setText("lbl-nama");
+        lbl_ktp.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        lbl_ktp.setText("No Ktp");
 
-        jLabel12.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel12.setText("No Ktp");
+        lbl_nohandphone.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbl_nohandphone.setText("No Handphone");
 
-        jLabel13.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel13.setText("No Handphone");
+        lbl_noktp.setText("lbl-noktp");
 
-        jLabel3.setText("lbl-noktp");
+        lbl_nohp.setText("lbl-nohp");
 
-        jLabel4.setText("lbl-no");
+        lbl_jnsmobil.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbl_jnsmobil.setText("Jenis Mobil");
 
-        jLabel14.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel14.setText("Jenis Mobil");
+        lbl_jenismobil.setText("lbl-jenismobil");
 
-        jLabel5.setText("lbl-jenismobil");
+        lbl_lmpeminjaman.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbl_lmpeminjaman.setText("Lama Peminjaman");
 
-        jLabel15.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel15.setText("Lama Peminjaman");
+        lbl_lamapemin.setText("lbl-lamapemin");
 
-        jLabel6.setText("lbl-lamapemin");
+        lbl_biaya.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbl_biaya.setText("Total Biaya");
 
-        jLabel16.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel16.setText("Total Biaya");
+        lbl_totbiaya.setText("lbl-totbiaya");
 
-        jLabel7.setText("lbl-totbaiaya");
+        btn_home.setBackground(new java.awt.Color(255, 255, 255));
+        btn_home.setIcon(new javax.swing.ImageIcon("D:\\Documents\\NetBeansProjects\\RPL-TBO-branch\\src\\assets\\home (1).jpg")); // NOI18N
+        btn_home.setText("Home");
+        btn_home.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jButton2.setBackground(new java.awt.Color(255, 255, 255));
-        jButton2.setIcon(new javax.swing.ImageIcon("D:\\Rental\\GUI\\JavaApplication10\\Icon\\home (1).jpg")); // NOI18N
-        jButton2.setText("Home");
-        jButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btn_submit.setBackground(new java.awt.Color(255, 255, 255));
+        btn_submit.setIcon(new javax.swing.ImageIcon("D:\\Documents\\NetBeansProjects\\RPL-TBO-branch\\src\\assets\\arrow_right.png")); // NOI18N
+        btn_submit.setText("Submit");
+        btn_submit.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jButton1.setIcon(new javax.swing.ImageIcon("D:\\Rental\\GUI\\JavaApplication10\\Icon\\arrow_right.png")); // NOI18N
-        jButton1.setText("Submit");
-        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        pic_ftransaksi.setIcon(new javax.swing.ImageIcon("D:\\Documents\\NetBeansProjects\\RPL-TBO-branch\\src\\assets\\form Transaksi.jpg")); // NOI18N
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout bg_whiteLayout = new javax.swing.GroupLayout(bg_white);
+        bg_white.setLayout(bg_whiteLayout);
+        bg_whiteLayout.setHorizontalGroup(
+            bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bg_whiteLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_home, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_submit, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(56, 56, 56))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+            .addGroup(bg_whiteLayout.createSequentialGroup()
+                .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(bg_whiteLayout.createSequentialGroup()
                         .addGap(93, 93, 93)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel16)
-                            .addComponent(jLabel15)
-                            .addComponent(jLabel14)
-                            .addComponent(jLabel13)
-                            .addComponent(jLabel12)
-                            .addComponent(jLabel11)
-                            .addComponent(jLabel9)
-                            .addComponent(jLabel8))
+                        .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lbl_biaya)
+                            .addComponent(lbl_lmpeminjaman)
+                            .addComponent(lbl_jnsmobil)
+                            .addComponent(lbl_nohandphone)
+                            .addComponent(lbl_ktp)
+                            .addComponent(lbl_namapeminjam)
+                            .addComponent(lbl_nopolisi)
+                            .addComponent(lbl_datapeminjam))
                         .addGap(45, 45, 45)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel7)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel4)
-                                .addComponent(jLabel5)
-                                .addComponent(jLabel3)
-                                .addComponent(jLabel2)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(jLabel1)))
+                        .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lbl_lamapemin)
+                            .addComponent(lbl_totbiaya)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(lbl_nohp)
+                                .addComponent(lbl_jenismobil)
+                                .addComponent(lbl_noktp)
+                                .addComponent(lbl_nama)
+                                .addComponent(txt_nopolisi, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(bg_whiteLayout.createSequentialGroup()
+                        .addGap(16, 16, 16)
+                        .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(pic_formtransaksi)
+                            .addComponent(jLabel1)))
+                    .addGroup(bg_whiteLayout.createSequentialGroup()
+                        .addGap(23, 23, 23)
+                        .addComponent(pic_ftransaksi)))
                 .addContainerGap(263, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        bg_whiteLayout.setVerticalGroup(
+            bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(bg_whiteLayout.createSequentialGroup()
                 .addContainerGap()
+                .addComponent(pic_formtransaksi)
+                .addGap(7, 7, 7)
+                .addComponent(pic_ftransaksi)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
-                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lbl_datapeminjam, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel9))
+                .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_nopolisi, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_nopolisi))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel11))
+                .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_nama)
+                    .addComponent(lbl_namapeminjam))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel12))
+                .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_noktp)
+                    .addComponent(lbl_ktp))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel13))
+                .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_nohp)
+                    .addComponent(lbl_nohandphone))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel14))
+                .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_jenismobil)
+                    .addComponent(lbl_jnsmobil))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel15))
+                .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_lamapemin)
+                    .addComponent(lbl_lmpeminjaman))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel7)
-                    .addComponent(jLabel16))
+                .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lbl_totbiaya)
+                    .addComponent(lbl_biaya))
                 .addGap(14, 14, 14)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_home, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_submit, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(19, 19, 19))
         );
 
@@ -183,13 +195,11 @@ public class Transaksi extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(bg_white, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(bg_white, javax.swing.GroupLayout.PREFERRED_SIZE, 470, Short.MAX_VALUE)
         );
 
         pack();
@@ -231,24 +241,26 @@ public class Transaksi extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JPanel bg_white;
+    private javax.swing.JButton btn_home;
+    private javax.swing.JButton btn_submit;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel lbl_biaya;
+    private javax.swing.JLabel lbl_datapeminjam;
+    private javax.swing.JLabel lbl_jenismobil;
+    private javax.swing.JLabel lbl_jnsmobil;
+    private javax.swing.JLabel lbl_ktp;
+    private javax.swing.JLabel lbl_lamapemin;
+    private javax.swing.JLabel lbl_lmpeminjaman;
+    private javax.swing.JLabel lbl_nama;
+    private javax.swing.JLabel lbl_namapeminjam;
+    private javax.swing.JLabel lbl_nohandphone;
+    private javax.swing.JLabel lbl_nohp;
+    private javax.swing.JLabel lbl_noktp;
+    private javax.swing.JLabel lbl_nopolisi;
+    private javax.swing.JLabel lbl_totbiaya;
+    private javax.swing.JLabel pic_formtransaksi;
+    private javax.swing.JLabel pic_ftransaksi;
+    private javax.swing.JTextField txt_nopolisi;
     // End of variables declaration//GEN-END:variables
 }
