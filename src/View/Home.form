@@ -276,18 +276,18 @@
                   <EmptySpace min="30" pref="30" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="btn_logout1" min="-2" pref="200" max="-2" attributes="0"/>
+                          <Component id="btnLogout" min="-2" pref="200" max="-2" attributes="0"/>
                           <EmptySpace min="140" pref="140" max="-2" attributes="0"/>
                           <Component id="pic_rentalmobil1" min="-2" pref="390" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="btn_kelolamobil2" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
-                              <Component id="btn_kelolapemesanan1" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
-                              <Component id="btn_kelolapengembalian1" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
-                              <Component id="btn_transaksi1" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
-                              <Component id="btn_report1" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
-                              <Component id="btn_exit1" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                              <Component id="btnKelolaMobil" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                              <Component id="btnKelolaPemesanan" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                              <Component id="btnKelolaPengembalian" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                              <Component id="btnTransaksi" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                              <Component id="btnReport" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                              <Component id="btnExit" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
                           <Component id="pic_mobil1" min="-2" pref="680" max="-2" attributes="0"/>
@@ -301,24 +301,24 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="btn_logout1" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                      <Component id="btnLogout" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
                       <Component id="pic_rentalmobil1" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
                   </Group>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="btn_kelolamobil2" min="-2" pref="80" max="-2" attributes="0"/>
+                          <Component id="btnKelolaMobil" min="-2" pref="80" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="btn_kelolapemesanan1" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
+                              <Component id="btnKelolaPemesanan" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="60" pref="60" max="-2" attributes="0"/>
-                                  <Component id="btn_kelolapengembalian1" min="-2" pref="90" max="-2" attributes="0"/>
+                                  <Component id="btnKelolaPengembalian" min="-2" pref="90" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <Component id="btn_transaksi1" min="-2" pref="80" max="-2" attributes="0"/>
+                          <Component id="btnTransaksi" min="-2" pref="80" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                          <Component id="btn_report1" min="-2" pref="80" max="-2" attributes="0"/>
+                          <Component id="btnReport" min="-2" pref="80" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                          <Component id="btn_exit1" min="-2" pref="80" max="-2" attributes="0"/>
+                          <Component id="btnExit" min="-2" pref="80" max="-2" attributes="0"/>
                       </Group>
                       <Component id="pic_mobil1" alignment="0" min="-2" pref="400" max="-2" attributes="0"/>
                   </Group>
@@ -327,7 +327,7 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="btn_kelolapemesanan1">
+        <Component class="javax.swing.JButton" name="btnKelolaPemesanan">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -344,7 +344,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="btn_logout1">
+        <Component class="javax.swing.JButton" name="btnLogout">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -360,10 +360,10 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_logout1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLogoutActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btn_transaksi1">
+        <Component class="javax.swing.JButton" name="btnTransaksi">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -379,7 +379,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="btn_report1">
+        <Component class="javax.swing.JButton" name="btnReport">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -395,7 +395,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="btn_exit1">
+        <Component class="javax.swing.JButton" name="btnExit">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -426,7 +426,7 @@
             <Property name="text" type="java.lang.String" value="jLabel2"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="btn_kelolapengembalian1">
+        <Component class="javax.swing.JButton" name="btnKelolaPengembalian">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -442,7 +442,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="btn_kelolamobil2">
+        <Component class="javax.swing.JButton" name="btnKelolaMobil">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -458,7 +458,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_kelolamobil2ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnKelolaMobilActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

@@ -391,7 +391,7 @@
                   <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="btn_home1" min="-2" pref="110" max="-2" attributes="0"/>
+                          <Component id="btnHome" min="-2" pref="110" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
@@ -412,21 +412,21 @@
                               </Group>
                           </Group>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="cmbx_jenismobil1" alignment="0" min="-2" pref="178" max="-2" attributes="0"/>
+                              <Component id="cmbJenisMobil" alignment="0" min="-2" pref="178" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="cmbx_durasi1" min="-2" pref="118" max="-2" attributes="0"/>
+                                  <Component id="cmbDurasi" min="-2" pref="118" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Component id="lbl_perhari1" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="txt_noktp2" alignment="0" min="-2" pref="178" max="-2" attributes="0"/>
-                              <Component id="txt_nmpelanggan1" alignment="0" min="-2" pref="178" max="-2" attributes="0"/>
-                              <Component id="txt_noktp3" alignment="0" min="-2" pref="178" max="-2" attributes="0"/>
+                              <Component id="txtNoHp" alignment="0" min="-2" pref="178" max="-2" attributes="0"/>
+                              <Component id="txtNomorPelanggan" alignment="0" min="-2" pref="178" max="-2" attributes="0"/>
+                              <Component id="txtNoKtp" alignment="0" min="-2" pref="178" max="-2" attributes="0"/>
                               <Component id="lbl_total1" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="117" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <Component id="btn_submit1" min="-2" pref="112" max="-2" attributes="0"/>
+                  <Component id="btnSubmit" min="-2" pref="112" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="196" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -443,7 +443,7 @@
                       <Group type="102" alignment="1" attributes="0">
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="lbl_nmpelanggan1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txt_nmpelanggan1" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                              <Component id="txtNomorPelanggan" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                           </Group>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
@@ -453,14 +453,14 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="txt_noktp3" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                                      <Component id="txtNoKtp" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                                       <Component id="lbl_noktp1" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="txt_noktp2" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                              <Component id="txtNoHp" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                               <Component id="lbl_nohp1" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -475,12 +475,12 @@
                           </Group>
                           <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="cmbx_durasi1" alignment="1" min="-2" pref="33" max="-2" attributes="0"/>
+                      <Component id="cmbDurasi" alignment="1" min="-2" pref="33" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="lbl_jenismobil1" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="cmbx_jenismobil1" alignment="0" min="-2" pref="31" max="-2" attributes="0"/>
+                      <Component id="cmbJenisMobil" alignment="0" min="-2" pref="31" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -493,8 +493,8 @@
                           <Component id="lbl_total1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="btn_home1" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
-                              <Component id="btn_submit1" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                              <Component id="btnHome" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                              <Component id="btnSubmit" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -557,7 +557,7 @@
             <Property name="text" type="java.lang.String" value="Total Biaya"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JComboBox" name="cmbx_durasi1">
+        <Component class="javax.swing.JComboBox" name="cmbDurasi">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="4">
@@ -569,17 +569,17 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmbx_durasi1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmbDurasiActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="txt_nmpelanggan1">
+        <Component class="javax.swing.JTextField" name="txtNomorPelanggan">
           <Properties>
             <Property name="name" type="java.lang.String" value="" noResource="true"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txt_noktp2">
+        <Component class="javax.swing.JTextField" name="txtNoHp">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_noktp2ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNoHpActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="lbl_perhari1">
@@ -587,7 +587,7 @@
             <Property name="text" type="java.lang.String" value="Perhari"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JComboBox" name="cmbx_jenismobil1">
+        <Component class="javax.swing.JComboBox" name="cmbJenisMobil">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="4">
@@ -599,7 +599,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmbx_jenismobil1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmbJenisMobilActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="pic_people1">
@@ -620,7 +620,7 @@
             <Property name="text" type="java.lang.String" value="Total"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="btn_submit1">
+        <Component class="javax.swing.JButton" name="btnSubmit">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -636,7 +636,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="btn_home1">
+        <Component class="javax.swing.JButton" name="btnHome">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -659,9 +659,9 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txt_noktp3">
+        <Component class="javax.swing.JTextField" name="txtNoKtp">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_noktp3ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNoKtpActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

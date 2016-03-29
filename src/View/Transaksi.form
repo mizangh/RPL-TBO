@@ -67,14 +67,14 @@
                           </Group>
                           <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="lbl_lamapemin" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbl_totbiaya" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblLamaPinjam" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblTotalBiaya" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                                  <Component id="lbl_nohp" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lbl_jenismobil" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lbl_noktp" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lbl_nama" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txt_nopolisi" alignment="0" min="-2" pref="183" max="-2" attributes="0"/>
+                                  <Component id="lblNoHp" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblJenisMobil" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblNoKtp" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblNama" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtNoPol" alignment="0" min="-2" pref="183" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -107,37 +107,37 @@
                   <Component id="lbl_datapeminjam" min="-2" pref="25" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="txt_nopolisi" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                      <Component id="txtNoPol" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
                       <Component id="lbl_nopolisi" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lbl_nama" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblNama" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="lbl_namapeminjam" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lbl_noktp" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblNoKtp" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="lbl_ktp" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lbl_nohp" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblNoHp" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="lbl_nohandphone" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lbl_jenismobil" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblJenisMobil" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="lbl_jnsmobil" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lbl_lamapemin" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblLamaPinjam" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="lbl_lmpeminjaman" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="lbl_totbiaya" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblTotalBiaya" min="-2" max="-2" attributes="0"/>
                       <Component id="lbl_biaya" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
@@ -169,7 +169,7 @@
             <Property name="text" type="java.lang.String" value="No.Polisi/Plat"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txt_nopolisi">
+        <Component class="javax.swing.JTextField" name="txtNoPol">
         </Component>
         <Component class="javax.swing.JLabel" name="lbl_namapeminjam">
           <Properties>
@@ -179,7 +179,7 @@
             <Property name="text" type="java.lang.String" value="Nama Peminjam"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lbl_nama">
+        <Component class="javax.swing.JLabel" name="lblNama">
           <Properties>
             <Property name="text" type="java.lang.String" value="lbl-nama"/>
           </Properties>
@@ -200,12 +200,12 @@
             <Property name="text" type="java.lang.String" value="No Handphone"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lbl_noktp">
+        <Component class="javax.swing.JLabel" name="lblNoKtp">
           <Properties>
             <Property name="text" type="java.lang.String" value="lbl-noktp"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lbl_nohp">
+        <Component class="javax.swing.JLabel" name="lblNoHp">
           <Properties>
             <Property name="text" type="java.lang.String" value="lbl-nohp"/>
           </Properties>
@@ -218,7 +218,7 @@
             <Property name="text" type="java.lang.String" value="Jenis Mobil"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lbl_jenismobil">
+        <Component class="javax.swing.JLabel" name="lblJenisMobil">
           <Properties>
             <Property name="text" type="java.lang.String" value="lbl-jenismobil"/>
           </Properties>
@@ -231,7 +231,7 @@
             <Property name="text" type="java.lang.String" value="Lama Peminjaman"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lbl_lamapemin">
+        <Component class="javax.swing.JLabel" name="lblLamaPinjam">
           <Properties>
             <Property name="text" type="java.lang.String" value="lbl-lamapemin"/>
           </Properties>
@@ -244,7 +244,7 @@
             <Property name="text" type="java.lang.String" value="Total Biaya"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lbl_totbiaya">
+        <Component class="javax.swing.JLabel" name="lblTotalBiaya">
           <Properties>
             <Property name="text" type="java.lang.String" value="lbl-totbiaya"/>
           </Properties>

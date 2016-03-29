@@ -30,16 +30,16 @@ public class Report extends javax.swing.JFrame {
         bg_white = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        table_report = new javax.swing.JTable();
+        tableReport = new javax.swing.JTable();
         pic_report = new javax.swing.JLabel();
-        btn_home = new javax.swing.JButton();
+        btnHome = new javax.swing.JButton();
         pic_reprt = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         bg_white.setBackground(new java.awt.Color(255, 255, 255));
 
-        table_report.setModel(new javax.swing.table.DefaultTableModel(
+        tableReport.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null},
@@ -58,12 +58,12 @@ public class Report extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(table_report);
+        jScrollPane1.setViewportView(tableReport);
 
-        btn_home.setBackground(new java.awt.Color(255, 255, 255));
-        btn_home.setIcon(new javax.swing.ImageIcon("D:\\Documents\\NetBeansProjects\\RPL-TBO-branch\\src\\assets\\home (1).jpg")); // NOI18N
-        btn_home.setText("Home");
-        btn_home.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnHome.setBackground(new java.awt.Color(255, 255, 255));
+        btnHome.setIcon(new javax.swing.ImageIcon("D:\\Documents\\NetBeansProjects\\RPL-TBO-branch\\src\\assets\\home (1).jpg")); // NOI18N
+        btnHome.setText("Home");
+        btnHome.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         pic_reprt.setIcon(new javax.swing.ImageIcon("D:\\Documents\\NetBeansProjects\\RPL-TBO-branch\\src\\assets\\Report.jpg")); // NOI18N
 
@@ -87,7 +87,7 @@ public class Report extends javax.swing.JFrame {
                             .addComponent(jLabel1))
                         .addGroup(bg_whiteLayout.createSequentialGroup()
                             .addGap(532, 532, 532)
-                            .addComponent(btn_home, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(btnHome, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(41, Short.MAX_VALUE))
         );
         bg_whiteLayout.setVerticalGroup(
@@ -103,7 +103,7 @@ public class Report extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
-                .addComponent(btn_home)
+                .addComponent(btnHome)
                 .addGap(32, 32, 32))
         );
 
@@ -160,11 +160,11 @@ public class Report extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel bg_white;
-    private javax.swing.JButton btn_home;
+    private javax.swing.JButton btnHome;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel pic_report;
     private javax.swing.JLabel pic_reprt;
-    private javax.swing.JTable table_report;
+    private javax.swing.JTable tableReport;
     // End of variables declaration//GEN-END:variables
 }

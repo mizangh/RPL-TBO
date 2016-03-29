@@ -29,15 +29,15 @@ public class KelolaMobil extends javax.swing.JFrame {
 
         bg_white = new javax.swing.JPanel();
         lbl_nopolisi = new javax.swing.JLabel();
-        txt_nopolisi = new javax.swing.JTextField();
+        txtNoPol = new javax.swing.JTextField();
         pic_kelolamobil = new javax.swing.JLabel();
         lbl_merkmobil = new javax.swing.JLabel();
         lbl_typemobil = new javax.swing.JLabel();
         lbl_hrgsewa = new javax.swing.JLabel();
-        txt_merkmobil = new javax.swing.JTextField();
-        txt_typemobil = new javax.swing.JTextField();
-        txt_hrgsewa = new javax.swing.JTextField();
-        cmbx_thnproduksi = new javax.swing.JComboBox();
+        txtMerk = new javax.swing.JTextField();
+        txtTipe = new javax.swing.JTextField();
+        txtHargaSewa = new javax.swing.JTextField();
+        cmbTahunProduksi = new javax.swing.JComboBox();
         lbl_thnproduksi = new javax.swing.JLabel();
         btn_submit = new javax.swing.JButton();
         btn_home = new javax.swing.JButton();
@@ -55,12 +55,12 @@ public class KelolaMobil extends javax.swing.JFrame {
         lbl_merkmobil.setText("Merk Mobil");
 
         lbl_typemobil.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lbl_typemobil.setText("Type Mobil");
+        lbl_typemobil.setText("Tipe Mobil");
 
         lbl_hrgsewa.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbl_hrgsewa.setText("Harga Sewa");
 
-        cmbx_thnproduksi.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbTahunProduksi.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         lbl_thnproduksi.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbl_thnproduksi.setText("Tahun Produksi");
@@ -96,20 +96,20 @@ public class KelolaMobil extends javax.swing.JFrame {
                                     .addGroup(bg_whiteLayout.createSequentialGroup()
                                         .addComponent(lbl_nopolisi)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(txt_nopolisi, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(txtNoPol, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(bg_whiteLayout.createSequentialGroup()
                                         .addComponent(lbl_merkmobil)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(txt_merkmobil, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(txtMerk, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(bg_whiteLayout.createSequentialGroup()
                                         .addGap(0, 0, Short.MAX_VALUE)
                                         .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(txt_hrgsewa, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(txt_typemobil, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                            .addComponent(txtHargaSewa, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txtTipe, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                     .addGroup(bg_whiteLayout.createSequentialGroup()
                                         .addComponent(lbl_thnproduksi)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 112, Short.MAX_VALUE)
-                                        .addComponent(cmbx_thnproduksi, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(cmbTahunProduksi, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(155, 155, 155)))
                         .addGap(44, 44, 44))
                     .addGroup(bg_whiteLayout.createSequentialGroup()
@@ -134,25 +134,25 @@ public class KelolaMobil extends javax.swing.JFrame {
                 .addGap(26, 26, 26)
                 .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_nopolisi)
-                    .addComponent(txt_nopolisi, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtNoPol, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(23, 23, 23)
                 .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_merkmobil, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtMerk, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbl_merkmobil))
                 .addGap(18, 18, 18)
                 .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_typemobil, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtTipe, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbl_typemobil))
                 .addGap(18, 18, 18)
                 .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(bg_whiteLayout.createSequentialGroup()
-                        .addComponent(cmbx_thnproduksi, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(cmbTahunProduksi, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bg_whiteLayout.createSequentialGroup()
                         .addComponent(lbl_thnproduksi)
                         .addGap(21, 21, 21)))
                 .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_hrgsewa, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtHargaSewa, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbl_hrgsewa))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
                 .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -216,7 +216,7 @@ public class KelolaMobil extends javax.swing.JFrame {
     private javax.swing.JPanel bg_white;
     private javax.swing.JButton btn_home;
     private javax.swing.JButton btn_submit;
-    private javax.swing.JComboBox cmbx_thnproduksi;
+    private javax.swing.JComboBox cmbTahunProduksi;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lbl_hrgsewa;
     private javax.swing.JLabel lbl_merkmobil;
@@ -224,9 +224,9 @@ public class KelolaMobil extends javax.swing.JFrame {
     private javax.swing.JLabel lbl_thnproduksi;
     private javax.swing.JLabel lbl_typemobil;
     private javax.swing.JLabel pic_kelolamobil;
-    private javax.swing.JTextField txt_hrgsewa;
-    private javax.swing.JTextField txt_merkmobil;
-    private javax.swing.JTextField txt_nopolisi;
-    private javax.swing.JTextField txt_typemobil;
+    private javax.swing.JTextField txtHargaSewa;
+    private javax.swing.JTextField txtMerk;
+    private javax.swing.JTextField txtNoPol;
+    private javax.swing.JTextField txtTipe;
     // End of variables declaration//GEN-END:variables
 }

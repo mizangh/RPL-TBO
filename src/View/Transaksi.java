@@ -31,19 +31,19 @@ public class Transaksi extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         lbl_datapeminjam = new javax.swing.JLabel();
         lbl_nopolisi = new javax.swing.JLabel();
-        txt_nopolisi = new javax.swing.JTextField();
+        txtNoPol = new javax.swing.JTextField();
         lbl_namapeminjam = new javax.swing.JLabel();
-        lbl_nama = new javax.swing.JLabel();
+        lblNama = new javax.swing.JLabel();
         lbl_ktp = new javax.swing.JLabel();
         lbl_nohandphone = new javax.swing.JLabel();
-        lbl_noktp = new javax.swing.JLabel();
-        lbl_nohp = new javax.swing.JLabel();
+        lblNoKtp = new javax.swing.JLabel();
+        lblNoHp = new javax.swing.JLabel();
         lbl_jnsmobil = new javax.swing.JLabel();
-        lbl_jenismobil = new javax.swing.JLabel();
+        lblJenisMobil = new javax.swing.JLabel();
         lbl_lmpeminjaman = new javax.swing.JLabel();
-        lbl_lamapemin = new javax.swing.JLabel();
+        lblLamaPinjam = new javax.swing.JLabel();
         lbl_biaya = new javax.swing.JLabel();
-        lbl_totbiaya = new javax.swing.JLabel();
+        lblTotalBiaya = new javax.swing.JLabel();
         btn_home = new javax.swing.JButton();
         btn_submit = new javax.swing.JButton();
         pic_formtransaksi = new javax.swing.JLabel();
@@ -63,7 +63,7 @@ public class Transaksi extends javax.swing.JFrame {
         lbl_namapeminjam.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbl_namapeminjam.setText("Nama Peminjam");
 
-        lbl_nama.setText("lbl-nama");
+        lblNama.setText("lbl-nama");
 
         lbl_ktp.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         lbl_ktp.setText("No Ktp");
@@ -71,24 +71,24 @@ public class Transaksi extends javax.swing.JFrame {
         lbl_nohandphone.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbl_nohandphone.setText("No Handphone");
 
-        lbl_noktp.setText("lbl-noktp");
+        lblNoKtp.setText("lbl-noktp");
 
-        lbl_nohp.setText("lbl-nohp");
+        lblNoHp.setText("lbl-nohp");
 
         lbl_jnsmobil.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbl_jnsmobil.setText("Jenis Mobil");
 
-        lbl_jenismobil.setText("lbl-jenismobil");
+        lblJenisMobil.setText("lbl-jenismobil");
 
         lbl_lmpeminjaman.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbl_lmpeminjaman.setText("Lama Peminjaman");
 
-        lbl_lamapemin.setText("lbl-lamapemin");
+        lblLamaPinjam.setText("lbl-lamapemin");
 
         lbl_biaya.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbl_biaya.setText("Total Biaya");
 
-        lbl_totbiaya.setText("lbl-totbiaya");
+        lblTotalBiaya.setText("lbl-totbiaya");
 
         btn_home.setBackground(new java.awt.Color(255, 255, 255));
         btn_home.setIcon(new javax.swing.ImageIcon("D:\\Documents\\NetBeansProjects\\RPL-TBO-branch\\src\\assets\\home (1).jpg")); // NOI18N
@@ -127,14 +127,14 @@ public class Transaksi extends javax.swing.JFrame {
                             .addComponent(lbl_datapeminjam))
                         .addGap(45, 45, 45)
                         .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbl_lamapemin)
-                            .addComponent(lbl_totbiaya)
+                            .addComponent(lblLamaPinjam)
+                            .addComponent(lblTotalBiaya)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(lbl_nohp)
-                                .addComponent(lbl_jenismobil)
-                                .addComponent(lbl_noktp)
-                                .addComponent(lbl_nama)
-                                .addComponent(txt_nopolisi, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(lblNoHp)
+                                .addComponent(lblJenisMobil)
+                                .addComponent(lblNoKtp)
+                                .addComponent(lblNama)
+                                .addComponent(txtNoPol, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(bg_whiteLayout.createSequentialGroup()
                         .addGap(16, 16, 16)
                         .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -158,31 +158,31 @@ public class Transaksi extends javax.swing.JFrame {
                 .addComponent(lbl_datapeminjam, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_nopolisi, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtNoPol, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbl_nopolisi))
                 .addGap(18, 18, 18)
                 .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl_nama)
+                    .addComponent(lblNama)
                     .addComponent(lbl_namapeminjam))
                 .addGap(18, 18, 18)
                 .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl_noktp)
+                    .addComponent(lblNoKtp)
                     .addComponent(lbl_ktp))
                 .addGap(18, 18, 18)
                 .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl_nohp)
+                    .addComponent(lblNoHp)
                     .addComponent(lbl_nohandphone))
                 .addGap(18, 18, 18)
                 .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl_jenismobil)
+                    .addComponent(lblJenisMobil)
                     .addComponent(lbl_jnsmobil))
                 .addGap(18, 18, 18)
                 .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl_lamapemin)
+                    .addComponent(lblLamaPinjam)
                     .addComponent(lbl_lmpeminjaman))
                 .addGap(18, 18, 18)
                 .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lbl_totbiaya)
+                    .addComponent(lblTotalBiaya)
                     .addComponent(lbl_biaya))
                 .addGap(14, 14, 14)
                 .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -245,22 +245,22 @@ public class Transaksi extends javax.swing.JFrame {
     private javax.swing.JButton btn_home;
     private javax.swing.JButton btn_submit;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel lblJenisMobil;
+    private javax.swing.JLabel lblLamaPinjam;
+    private javax.swing.JLabel lblNama;
+    private javax.swing.JLabel lblNoHp;
+    private javax.swing.JLabel lblNoKtp;
+    private javax.swing.JLabel lblTotalBiaya;
     private javax.swing.JLabel lbl_biaya;
     private javax.swing.JLabel lbl_datapeminjam;
-    private javax.swing.JLabel lbl_jenismobil;
     private javax.swing.JLabel lbl_jnsmobil;
     private javax.swing.JLabel lbl_ktp;
-    private javax.swing.JLabel lbl_lamapemin;
     private javax.swing.JLabel lbl_lmpeminjaman;
-    private javax.swing.JLabel lbl_nama;
     private javax.swing.JLabel lbl_namapeminjam;
     private javax.swing.JLabel lbl_nohandphone;
-    private javax.swing.JLabel lbl_nohp;
-    private javax.swing.JLabel lbl_noktp;
     private javax.swing.JLabel lbl_nopolisi;
-    private javax.swing.JLabel lbl_totbiaya;
     private javax.swing.JLabel pic_formtransaksi;
     private javax.swing.JLabel pic_ftransaksi;
-    private javax.swing.JTextField txt_nopolisi;
+    private javax.swing.JTextField txtNoPol;
     // End of variables declaration//GEN-END:variables
 }

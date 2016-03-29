@@ -38,15 +38,15 @@ public class Home extends javax.swing.JFrame {
         btn_kelolapengembalian = new javax.swing.JButton();
         btn_kelolamobil1 = new javax.swing.JButton();
         bg_white1 = new javax.swing.JPanel();
-        btn_kelolapemesanan1 = new javax.swing.JButton();
-        btn_logout1 = new javax.swing.JButton();
-        btn_transaksi1 = new javax.swing.JButton();
-        btn_report1 = new javax.swing.JButton();
-        btn_exit1 = new javax.swing.JButton();
+        btnKelolaPemesanan = new javax.swing.JButton();
+        btnLogout = new javax.swing.JButton();
+        btnTransaksi = new javax.swing.JButton();
+        btnReport = new javax.swing.JButton();
+        btnExit = new javax.swing.JButton();
         pic_rentalmobil1 = new javax.swing.JLabel();
         pic_mobil1 = new javax.swing.JLabel();
-        btn_kelolapengembalian1 = new javax.swing.JButton();
-        btn_kelolamobil2 = new javax.swing.JButton();
+        btnKelolaPengembalian = new javax.swing.JButton();
+        btnKelolaMobil = new javax.swing.JButton();
 
         bg_white.setBackground(new java.awt.Color(255, 255, 255));
         bg_white.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -154,54 +154,54 @@ public class Home extends javax.swing.JFrame {
         bg_white1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         bg_white1.setPreferredSize(new java.awt.Dimension(950, 610));
 
-        btn_kelolapemesanan1.setBackground(new java.awt.Color(255, 255, 255));
-        btn_kelolapemesanan1.setIcon(new javax.swing.ImageIcon("D:\\Documents\\NetBeansProjects\\RPL-TBO-branch\\src\\assets\\pinjam.png")); // NOI18N
-        btn_kelolapemesanan1.setText("Kelola Pemesanan");
-        btn_kelolapemesanan1.setToolTipText("");
-        btn_kelolapemesanan1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnKelolaPemesanan.setBackground(new java.awt.Color(255, 255, 255));
+        btnKelolaPemesanan.setIcon(new javax.swing.ImageIcon("D:\\Documents\\NetBeansProjects\\RPL-TBO-branch\\src\\assets\\pinjam.png")); // NOI18N
+        btnKelolaPemesanan.setText("Kelola Pemesanan");
+        btnKelolaPemesanan.setToolTipText("");
+        btnKelolaPemesanan.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        btn_logout1.setBackground(new java.awt.Color(255, 255, 255));
-        btn_logout1.setIcon(new javax.swing.ImageIcon("D:\\Documents\\NetBeansProjects\\RPL-TBO-branch\\src\\assets\\loginoke.png")); // NOI18N
-        btn_logout1.setText("Log Out");
-        btn_logout1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btn_logout1.addActionListener(new java.awt.event.ActionListener() {
+        btnLogout.setBackground(new java.awt.Color(255, 255, 255));
+        btnLogout.setIcon(new javax.swing.ImageIcon("D:\\Documents\\NetBeansProjects\\RPL-TBO-branch\\src\\assets\\loginoke.png")); // NOI18N
+        btnLogout.setText("Log Out");
+        btnLogout.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_logout1ActionPerformed(evt);
+                btnLogoutActionPerformed(evt);
             }
         });
 
-        btn_transaksi1.setBackground(new java.awt.Color(255, 255, 255));
-        btn_transaksi1.setIcon(new javax.swing.ImageIcon("D:\\Documents\\NetBeansProjects\\RPL-TBO-branch\\src\\assets\\transaksi.png")); // NOI18N
-        btn_transaksi1.setText("Transaksi");
-        btn_transaksi1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnTransaksi.setBackground(new java.awt.Color(255, 255, 255));
+        btnTransaksi.setIcon(new javax.swing.ImageIcon("D:\\Documents\\NetBeansProjects\\RPL-TBO-branch\\src\\assets\\transaksi.png")); // NOI18N
+        btnTransaksi.setText("Transaksi");
+        btnTransaksi.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        btn_report1.setBackground(new java.awt.Color(255, 255, 255));
-        btn_report1.setIcon(new javax.swing.ImageIcon("D:\\Documents\\NetBeansProjects\\RPL-TBO-branch\\src\\assets\\printer.png")); // NOI18N
-        btn_report1.setText("Report");
-        btn_report1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnReport.setBackground(new java.awt.Color(255, 255, 255));
+        btnReport.setIcon(new javax.swing.ImageIcon("D:\\Documents\\NetBeansProjects\\RPL-TBO-branch\\src\\assets\\printer.png")); // NOI18N
+        btnReport.setText("Report");
+        btnReport.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        btn_exit1.setBackground(new java.awt.Color(255, 255, 255));
-        btn_exit1.setIcon(new javax.swing.ImageIcon("D:\\Documents\\NetBeansProjects\\RPL-TBO-branch\\src\\assets\\Exit1.jpg")); // NOI18N
-        btn_exit1.setText("Exit");
-        btn_exit1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnExit.setBackground(new java.awt.Color(255, 255, 255));
+        btnExit.setIcon(new javax.swing.ImageIcon("D:\\Documents\\NetBeansProjects\\RPL-TBO-branch\\src\\assets\\Exit1.jpg")); // NOI18N
+        btnExit.setText("Exit");
+        btnExit.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         pic_rentalmobil1.setIcon(new javax.swing.ImageIcon("D:\\Documents\\NetBeansProjects\\RPL-TBO-branch\\src\\assets\\Rental Mobil.jpg")); // NOI18N
 
         pic_mobil1.setIcon(new javax.swing.ImageIcon("D:\\Documents\\NetBeansProjects\\RPL-TBO-branch\\src\\assets\\Background.png")); // NOI18N
         pic_mobil1.setText("jLabel2");
 
-        btn_kelolapengembalian1.setBackground(new java.awt.Color(255, 255, 255));
-        btn_kelolapengembalian1.setIcon(new javax.swing.ImageIcon("D:\\Documents\\NetBeansProjects\\RPL-TBO-branch\\src\\assets\\kembali_mobil.png")); // NOI18N
-        btn_kelolapengembalian1.setText("Kelola Pengembalian");
-        btn_kelolapengembalian1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnKelolaPengembalian.setBackground(new java.awt.Color(255, 255, 255));
+        btnKelolaPengembalian.setIcon(new javax.swing.ImageIcon("D:\\Documents\\NetBeansProjects\\RPL-TBO-branch\\src\\assets\\kembali_mobil.png")); // NOI18N
+        btnKelolaPengembalian.setText("Kelola Pengembalian");
+        btnKelolaPengembalian.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        btn_kelolamobil2.setBackground(new java.awt.Color(255, 255, 255));
-        btn_kelolamobil2.setIcon(new javax.swing.ImageIcon("D:\\Documents\\NetBeansProjects\\RPL-TBO-branch\\src\\assets\\add_mobil.png")); // NOI18N
-        btn_kelolamobil2.setText("Kelola Mobil");
-        btn_kelolamobil2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btn_kelolamobil2.addActionListener(new java.awt.event.ActionListener() {
+        btnKelolaMobil.setBackground(new java.awt.Color(255, 255, 255));
+        btnKelolaMobil.setIcon(new javax.swing.ImageIcon("D:\\Documents\\NetBeansProjects\\RPL-TBO-branch\\src\\assets\\add_mobil.png")); // NOI18N
+        btnKelolaMobil.setText("Kelola Mobil");
+        btnKelolaMobil.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnKelolaMobil.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_kelolamobil2ActionPerformed(evt);
+                btnKelolaMobilActionPerformed(evt);
             }
         });
 
@@ -213,17 +213,17 @@ public class Home extends javax.swing.JFrame {
                 .addGap(30, 30, 30)
                 .addGroup(bg_white1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(bg_white1Layout.createSequentialGroup()
-                        .addComponent(btn_logout1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(140, 140, 140)
                         .addComponent(pic_rentalmobil1, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(bg_white1Layout.createSequentialGroup()
                         .addGroup(bg_white1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btn_kelolamobil2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btn_kelolapemesanan1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btn_kelolapengembalian1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btn_transaksi1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btn_report1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btn_exit1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(btnKelolaMobil, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnKelolaPemesanan, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnKelolaPengembalian, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnTransaksi, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnReport, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(20, 20, 20)
                         .addComponent(pic_mobil1, javax.swing.GroupLayout.PREFERRED_SIZE, 680, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
@@ -232,21 +232,21 @@ public class Home extends javax.swing.JFrame {
             .addGroup(bg_white1Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addGroup(bg_white1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btn_logout1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(pic_rentalmobil1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(bg_white1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(bg_white1Layout.createSequentialGroup()
-                        .addComponent(btn_kelolamobil2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnKelolaMobil, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(bg_white1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btn_kelolapemesanan1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnKelolaPemesanan, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(bg_white1Layout.createSequentialGroup()
                                 .addGap(60, 60, 60)
-                                .addComponent(btn_kelolapengembalian1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addComponent(btn_transaksi1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnKelolaPengembalian, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnTransaksi, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, 0)
-                        .addComponent(btn_report1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnReport, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, 0)
-                        .addComponent(btn_exit1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(pic_mobil1, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
@@ -282,13 +282,13 @@ public class Home extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_kelolamobil1ActionPerformed
 
-    private void btn_logout1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_logout1ActionPerformed
+    private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn_logout1ActionPerformed
+    }//GEN-LAST:event_btnLogoutActionPerformed
 
-    private void btn_kelolamobil2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_kelolamobil2ActionPerformed
+    private void btnKelolaMobilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKelolaMobilActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn_kelolamobil2ActionPerformed
+    }//GEN-LAST:event_btnKelolaMobilActionPerformed
 
     /**
      * @param args the command line arguments
@@ -329,20 +329,20 @@ public class Home extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel bg_white;
     private javax.swing.JPanel bg_white1;
+    private javax.swing.JButton btnExit;
+    private javax.swing.JButton btnKelolaMobil;
+    private javax.swing.JButton btnKelolaPemesanan;
+    private javax.swing.JButton btnKelolaPengembalian;
+    private javax.swing.JButton btnLogout;
+    private javax.swing.JButton btnReport;
+    private javax.swing.JButton btnTransaksi;
     private javax.swing.JButton btn_exit;
-    private javax.swing.JButton btn_exit1;
     private javax.swing.JButton btn_kelolamobil1;
-    private javax.swing.JButton btn_kelolamobil2;
     private javax.swing.JButton btn_kelolapemesanan;
-    private javax.swing.JButton btn_kelolapemesanan1;
     private javax.swing.JButton btn_kelolapengembalian;
-    private javax.swing.JButton btn_kelolapengembalian1;
     private javax.swing.JButton btn_logout;
-    private javax.swing.JButton btn_logout1;
     private javax.swing.JButton btn_report;
-    private javax.swing.JButton btn_report1;
     private javax.swing.JButton btn_transaksi;
-    private javax.swing.JButton btn_transaksi1;
     private javax.swing.JLabel pic_mobil;
     private javax.swing.JLabel pic_mobil1;
     private javax.swing.JLabel pic_rentalmobil;
