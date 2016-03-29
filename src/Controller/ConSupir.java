@@ -112,7 +112,6 @@ public class ConSupir {
         } finally {
             if (Statement != null) {
                 try {
-
                     Statement.close();
                 } catch (SQLException ex) {
                     Logger.getLogger(ConMobil.class.getName()).log(Level.SEVERE, null, ex);

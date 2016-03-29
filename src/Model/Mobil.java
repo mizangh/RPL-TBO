@@ -57,4 +57,10 @@ public class Mobil {
     public boolean getStatus() {
         return status;
     }
+
+    @Override
+    public String toString() {
+        return "Mobil{" + "jenisMobil=" + jenisMobil + ", plat=" + plat + ", harga=" + harga + ", status=" + status + '}';
+    }
+    
 }

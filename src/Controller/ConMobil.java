@@ -8,8 +8,10 @@ package Controller;
 import Model.Mobil;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -124,6 +126,28 @@ public class ConMobil {
                 }
             }
         }
+    }
+    
+    public List<Mobil> getMobilSQL(String Jenis){
+        List<Mobil> lm = null;
+        try{
+            lm = new ArrayList<Mobil>();
+            PreparedStatement Statement = koneksi.prepareStatement("select * from mobil where jenisMobil like ?");
+            Statement.setString(1,"%" + Jenis + "%");
+            ResultSet rs = Statement.executeQuery();
+            while(rs.next()){
+                Mobil m = new Mobil();
+                m.setPlat(rs.getString("plat"));
+                m.setJenisMobil(rs.getString("jenisMobil"));
+                m.setHarga(rs.getInt("harga"));
+                m.setStatus(rs.getBoolean("Status"));
+                lm.add(m);
+            }
+        }catch(SQLException ex){
+             Logger.getLogger(ConMobil.class.getName()).log(Level.SEVERE, null, ex);
+        }    
+        return lm;
+    
     }
 
 }
