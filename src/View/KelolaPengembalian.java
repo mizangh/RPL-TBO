@@ -9,12 +9,12 @@ package View;
  *
  * @author gggggggggggggggggggg
  */
-public class Kelolapengembalian extends javax.swing.JFrame {
+public class KelolaPengembalian extends javax.swing.JFrame {
 
     /**
      * Creates new form Kelolapengembalian
      */
-    public Kelolapengembalian() {
+    public KelolaPengembalian() {
         initComponents();
     }
 
