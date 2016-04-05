@@ -159,6 +159,11 @@ public class Home extends javax.swing.JFrame {
         btnKelolaPemesanan.setText("Kelola Pemesanan");
         btnKelolaPemesanan.setToolTipText("");
         btnKelolaPemesanan.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnKelolaPemesanan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKelolaPemesananActionPerformed(evt);
+            }
+        });
 
         btnLogout.setBackground(new java.awt.Color(255, 255, 255));
         btnLogout.setIcon(new javax.swing.ImageIcon("D:\\Documents\\NetBeansProjects\\RPL-TBO-branch\\src\\assets\\loginoke.png")); // NOI18N
@@ -174,16 +179,31 @@ public class Home extends javax.swing.JFrame {
         btnTransaksi.setIcon(new javax.swing.ImageIcon("D:\\Documents\\NetBeansProjects\\RPL-TBO-branch\\src\\assets\\transaksi.png")); // NOI18N
         btnTransaksi.setText("Transaksi");
         btnTransaksi.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnTransaksi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTransaksiActionPerformed(evt);
+            }
+        });
 
         btnReport.setBackground(new java.awt.Color(255, 255, 255));
         btnReport.setIcon(new javax.swing.ImageIcon("D:\\Documents\\NetBeansProjects\\RPL-TBO-branch\\src\\assets\\printer.png")); // NOI18N
         btnReport.setText("Report");
         btnReport.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnReport.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnReportActionPerformed(evt);
+            }
+        });
 
         btnExit.setBackground(new java.awt.Color(255, 255, 255));
         btnExit.setIcon(new javax.swing.ImageIcon("D:\\Documents\\NetBeansProjects\\RPL-TBO-branch\\src\\assets\\Exit1.jpg")); // NOI18N
         btnExit.setText("Exit");
         btnExit.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExitActionPerformed(evt);
+            }
+        });
 
         pic_rentalmobil1.setIcon(new javax.swing.ImageIcon("D:\\Documents\\NetBeansProjects\\RPL-TBO-branch\\src\\assets\\Rental Mobil.jpg")); // NOI18N
 
@@ -194,6 +214,11 @@ public class Home extends javax.swing.JFrame {
         btnKelolaPengembalian.setIcon(new javax.swing.ImageIcon("D:\\Documents\\NetBeansProjects\\RPL-TBO-branch\\src\\assets\\kembali_mobil.png")); // NOI18N
         btnKelolaPengembalian.setText("Kelola Pengembalian");
         btnKelolaPengembalian.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnKelolaPengembalian.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKelolaPengembalianActionPerformed(evt);
+            }
+        });
 
         btnKelolaMobil.setBackground(new java.awt.Color(255, 255, 255));
         btnKelolaMobil.setIcon(new javax.swing.ImageIcon("D:\\Documents\\NetBeansProjects\\RPL-TBO-branch\\src\\assets\\add_mobil.png")); // NOI18N
@@ -283,12 +308,53 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_kelolamobil1ActionPerformed
 
     private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
-        // TODO add your handling code here:
+    dispose();
+    Login Lg = new Login();
+    Lg.setVisible(true);// TODO add your handling code here:
     }//GEN-LAST:event_btnLogoutActionPerformed
 
     private void btnKelolaMobilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKelolaMobilActionPerformed
-        // TODO add your handling code here:
+    this.hide();
+    bg_white1.removeAll();
+    KelolaMobil km = new KelolaMobil();
+    km.setVisible(true);
+    bg_white1.add(km);    // TODO add your handling code here:
     }//GEN-LAST:event_btnKelolaMobilActionPerformed
+
+    private void btnKelolaPemesananActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKelolaPemesananActionPerformed
+    this.hide();
+    bg_white1.removeAll();
+    KelolaPemesanan kp = new KelolaPemesanan();
+    kp.setVisible(true);
+    bg_white1.add(kp);    // TODO add your handling code here:
+    }//GEN-LAST:event_btnKelolaPemesananActionPerformed
+
+    private void btnKelolaPengembalianActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKelolaPengembalianActionPerformed
+    this.hide();
+    bg_white1.removeAll();
+    KelolaPengembalian kpe = new KelolaPengembalian();
+    kpe.setVisible(true);
+    bg_white1.add(kpe);    // TODO add your handling code here:
+    }//GEN-LAST:event_btnKelolaPengembalianActionPerformed
+
+    private void btnTransaksiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTransaksiActionPerformed
+    this.hide();
+    bg_white1.removeAll();
+    Transaksi Tr = new Transaksi();
+    Tr.setVisible(true);
+    bg_white1.add(Tr);    // TODO add your handling code here:
+    }//GEN-LAST:event_btnTransaksiActionPerformed
+
+    private void btnReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReportActionPerformed
+    this.hide();
+    Report Rp = new Report();
+    Rp.show();
+            // TODO add your handling code here:
+    }//GEN-LAST:event_btnReportActionPerformed
+
+    private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
+    System.exit(0);        // TODO add your handling code here:
+    }//GEN-LAST:event_btnExitActionPerformed
 
     /**
      * @param args the command line arguments
