@@ -209,6 +209,25 @@
         </Component>
       </SubComponents>
     </Container>
+    <Component class="javax.swing.JButton" name="btnTransaksi2">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="2" name="D:\Documents\NetBeansProjects\RPL-TBO-branch\src\assets\transaksi.png"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Transaksi"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+            <BevelBorder/>
+          </Border>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnTransaksi2ActionPerformed"/>
+      </Events>
+    </Component>
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
@@ -272,25 +291,25 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="30" pref="30" max="-2" attributes="0"/>
+              <Group type="102" attributes="0">
+                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="btnKelolaPengembalian" min="-2" pref="200" max="-2" attributes="0"/>
+                      <Component id="btnExit" min="-2" pref="200" max="-2" attributes="0"/>
+                      <Component id="btnKelolaPemesanan" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
+                      <Component id="btnLogout" min="-2" pref="200" max="-2" attributes="0"/>
+                      <Component id="btnTransaksi3" min="-2" pref="200" max="-2" attributes="0"/>
+                  </Group>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="btnLogout" min="-2" pref="200" max="-2" attributes="0"/>
-                          <EmptySpace min="140" pref="140" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="113" pref="113" max="-2" attributes="0"/>
                           <Component id="pic_rentalmobil1" min="-2" pref="390" max="-2" attributes="0"/>
+                          <EmptySpace pref="215" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="btnKelolaMobil" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
-                              <Component id="btnKelolaPemesanan" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
-                              <Component id="btnKelolaPengembalian" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
-                              <Component id="btnTransaksi" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
-                              <Component id="btnReport" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
-                              <Component id="btnExit" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
-                          <Component id="pic_mobil1" min="-2" pref="680" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="pic_mobil1" pref="0" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -298,30 +317,29 @@
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="btnLogout" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
-                      <Component id="pic_rentalmobil1" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
-                  </Group>
+              <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="btnKelolaMobil" min="-2" pref="80" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="btnKelolaPemesanan" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="60" pref="60" max="-2" attributes="0"/>
-                                  <Component id="btnKelolaPengembalian" min="-2" pref="90" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Component id="btnTransaksi" min="-2" pref="80" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                          <Component id="btnReport" min="-2" pref="80" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                          <Component id="btnExit" min="-2" pref="80" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                          <Component id="pic_rentalmobil1" min="-2" pref="70" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="pic_mobil1" min="-2" pref="317" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="pic_mobil1" alignment="0" min="-2" pref="400" max="-2" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="btnLogout" min="-2" pref="80" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="btnKelolaPemesanan" min="-2" pref="70" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="btnKelolaPengembalian" min="-2" pref="90" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="btnTransaksi3" min="-2" pref="80" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
                   </Group>
+                  <Component id="btnExit" min="-2" pref="80" max="-2" attributes="0"/>
+                  <EmptySpace pref="98" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -366,44 +384,6 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLogoutActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btnTransaksi">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-            </Property>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="D:\Documents\NetBeansProjects\RPL-TBO-branch\src\assets\transaksi.png"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Transaksi"/>
-            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-              <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
-                <BevelBorder/>
-              </Border>
-            </Property>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnTransaksiActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="btnReport">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-            </Property>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="D:\Documents\NetBeansProjects\RPL-TBO-branch\src\assets\printer.png"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Report"/>
-            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-              <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
-                <BevelBorder/>
-              </Border>
-            </Property>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnReportActionPerformed"/>
-          </Events>
-        </Component>
         <Component class="javax.swing.JButton" name="btnExit">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -430,14 +410,6 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="pic_mobil1">
-          <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="D:\Documents\NetBeansProjects\RPL-TBO-branch\src\assets\Background.png"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="jLabel2"/>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JButton" name="btnKelolaPengembalian">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -457,15 +429,23 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnKelolaPengembalianActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btnKelolaMobil">
+        <Component class="javax.swing.JLabel" name="pic_mobil1">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="2" name="D:\Documents\NetBeansProjects\RPL-TBO-branch\src\assets\Background.png"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="jLabel2"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="btnTransaksi3">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="D:\Documents\NetBeansProjects\RPL-TBO-branch\src\assets\add_mobil.png"/>
+              <Image iconType="2" name="D:\Documents\NetBeansProjects\RPL-TBO-branch\src\assets\transaksi.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Kelola Mobil"/>
+            <Property name="text" type="java.lang.String" value="Transaksi"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
                 <BevelBorder/>
@@ -473,7 +453,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnKelolaMobilActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnTransaksi3ActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

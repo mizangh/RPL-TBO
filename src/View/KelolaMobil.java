@@ -44,6 +44,7 @@ public class KelolaMobil extends javax.swing.JFrame {
         btn_submit = new javax.swing.JButton();
         btn_home = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -77,41 +78,43 @@ public class KelolaMobil extends javax.swing.JFrame {
             }
         });
 
+        jLabel2.setIcon(new javax.swing.ImageIcon("D:\\Documents\\NetBeansProjects\\Rental Mobil\\src\\assets\\Kelola Mobil.jpg")); // NOI18N
+
         javax.swing.GroupLayout bg_whiteLayout = new javax.swing.GroupLayout(bg_white);
         bg_white.setLayout(bg_whiteLayout);
         bg_whiteLayout.setHorizontalGroup(
             bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(bg_whiteLayout.createSequentialGroup()
+                .addGap(0, 34, Short.MAX_VALUE)
                 .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(bg_whiteLayout.createSequentialGroup()
-                        .addGap(52, 52, 52)
-                        .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bg_whiteLayout.createSequentialGroup()
+                        .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel2)
                             .addGroup(bg_whiteLayout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
                                 .addComponent(jLabel1)
                                 .addGap(18, 18, 18)
                                 .addComponent(pic_kelolamobil))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bg_whiteLayout.createSequentialGroup()
-                                .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(bg_whiteLayout.createSequentialGroup()
+                                .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addGroup(bg_whiteLayout.createSequentialGroup()
+                                        .addComponent(lbl_hrgsewa)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(txtHargaSewa, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(bg_whiteLayout.createSequentialGroup()
                                         .addComponent(lbl_nopolisi)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 128, Short.MAX_VALUE)
+                                        .addGap(146, 146, 146)
                                         .addComponent(txtNoPol, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(bg_whiteLayout.createSequentialGroup()
                                         .addComponent(lbl_merkmobil)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(txtMerk, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, bg_whiteLayout.createSequentialGroup()
-                                        .addComponent(lbl_hrgsewa)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(txtHargaSewa, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(155, 155, 155))))
+                                        .addGap(164, 164, 164)
+                                        .addComponent(txtMerk, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(155, 155, 155)))
+                        .addGap(44, 44, 44))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bg_whiteLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btn_home, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btn_submit, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(44, 44, 44))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btn_submit, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(54, 54, 54))))
         );
         bg_whiteLayout.setVerticalGroup(
             bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -120,27 +123,25 @@ public class KelolaMobil extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(pic_kelolamobil)
-                .addGap(26, 26, 26)
+                .addGap(8, 8, 8)
+                .addComponent(jLabel2)
+                .addGap(9, 9, 9)
                 .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_nopolisi)
                     .addComponent(txtNoPol, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27)
-                .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(bg_whiteLayout.createSequentialGroup()
-                        .addGap(64, 64, 64)
-                        .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lbl_hrgsewa)
-                            .addComponent(txtHargaSewa, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 202, Short.MAX_VALUE)
-                        .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btn_home, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btn_submit, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(24, 24, 24))
-                    .addGroup(bg_whiteLayout.createSequentialGroup()
-                        .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtMerk, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lbl_merkmobil))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addGap(18, 18, 18)
+                .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtMerk, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_merkmobil))
+                .addGap(18, 18, 18)
+                .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtHargaSewa, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_hrgsewa))
+                .addGap(84, 84, 84)
+                .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_home, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_submit, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(98, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -215,6 +216,7 @@ public class KelolaMobil extends javax.swing.JFrame {
     private javax.swing.JButton btn_home;
     private javax.swing.JButton btn_submit;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel lbl_hrgsewa;
     private javax.swing.JLabel lbl_merkmobil;
     private javax.swing.JLabel lbl_nopolisi;
