@@ -5,17 +5,23 @@
  */
 package View;
 
+import Controller.ConMobil;
+import Model.Mobil;
+import javax.swing.JButton;
+import javax.swing.JTextField;
+
 /**
  *
  * @author gggggggggggggggggggg
  */
 public class KelolaMobil extends javax.swing.JFrame {
-
+    ConMobil cM;
     /**
      * Creates new form KelolaMobil
      */
     public KelolaMobil() {
         initComponents();
+        cM = new ConMobil();
     }
 
     /**
@@ -32,13 +38,9 @@ public class KelolaMobil extends javax.swing.JFrame {
         txtNoPol = new javax.swing.JTextField();
         pic_kelolamobil = new javax.swing.JLabel();
         lbl_merkmobil = new javax.swing.JLabel();
-        lbl_typemobil = new javax.swing.JLabel();
         lbl_hrgsewa = new javax.swing.JLabel();
         txtMerk = new javax.swing.JTextField();
-        txtTipe = new javax.swing.JTextField();
         txtHargaSewa = new javax.swing.JTextField();
-        cmbTahunProduksi = new javax.swing.JComboBox();
-        lbl_thnproduksi = new javax.swing.JLabel();
         btn_submit = new javax.swing.JButton();
         btn_home = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
@@ -54,37 +56,35 @@ public class KelolaMobil extends javax.swing.JFrame {
         lbl_merkmobil.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbl_merkmobil.setText("Merk Mobil");
 
-        lbl_typemobil.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lbl_typemobil.setText("Tipe Mobil");
-
         lbl_hrgsewa.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbl_hrgsewa.setText("Harga Sewa");
 
-        cmbTahunProduksi.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        lbl_thnproduksi.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lbl_thnproduksi.setText("Tahun Produksi");
-
         btn_submit.setBackground(new java.awt.Color(255, 255, 255));
-        btn_submit.setIcon(new javax.swing.ImageIcon("D:\\Documents\\NetBeansProjects\\RPL-TBO-branch\\src\\assets\\arrow_right.png")); // NOI18N
         btn_submit.setText("Submit");
         btn_submit.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btn_submit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_submitActionPerformed(evt);
+            }
+        });
 
         btn_home.setBackground(new java.awt.Color(255, 255, 255));
-        btn_home.setIcon(new javax.swing.ImageIcon("D:\\Documents\\NetBeansProjects\\RPL-TBO-branch\\src\\assets\\home (1).jpg")); // NOI18N
         btn_home.setText("Home");
         btn_home.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon("D:\\Documents\\NetBeansProjects\\RPL-TBO-branch\\src\\assets\\Kelola Mobil.jpg")); // NOI18N
+        btn_home.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_homeActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout bg_whiteLayout = new javax.swing.GroupLayout(bg_white);
         bg_white.setLayout(bg_whiteLayout);
         bg_whiteLayout.setHorizontalGroup(
             bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(bg_whiteLayout.createSequentialGroup()
-                .addGap(52, 52, 52)
                 .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(bg_whiteLayout.createSequentialGroup()
+                        .addGap(52, 52, 52)
                         .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(bg_whiteLayout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
@@ -95,33 +95,22 @@ public class KelolaMobil extends javax.swing.JFrame {
                                 .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(bg_whiteLayout.createSequentialGroup()
                                         .addComponent(lbl_nopolisi)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 128, Short.MAX_VALUE)
                                         .addComponent(txtNoPol, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(bg_whiteLayout.createSequentialGroup()
                                         .addComponent(lbl_merkmobil)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(txtMerk, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(bg_whiteLayout.createSequentialGroup()
-                                        .addGap(0, 0, Short.MAX_VALUE)
-                                        .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(txtHargaSewa, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(txtTipe, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGroup(bg_whiteLayout.createSequentialGroup()
-                                        .addComponent(lbl_thnproduksi)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 112, Short.MAX_VALUE)
-                                        .addComponent(cmbTahunProduksi, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(155, 155, 155)))
-                        .addGap(44, 44, 44))
-                    .addGroup(bg_whiteLayout.createSequentialGroup()
-                        .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbl_typemobil)
-                            .addComponent(lbl_hrgsewa))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bg_whiteLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btn_home, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btn_submit, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, bg_whiteLayout.createSequentialGroup()
+                                        .addComponent(lbl_hrgsewa)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(txtHargaSewa, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(155, 155, 155))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bg_whiteLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btn_home, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btn_submit, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(44, 44, 44))
         );
         bg_whiteLayout.setVerticalGroup(
@@ -135,30 +124,23 @@ public class KelolaMobil extends javax.swing.JFrame {
                 .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_nopolisi)
                     .addComponent(txtNoPol, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(23, 23, 23)
-                .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtMerk, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_merkmobil))
-                .addGap(18, 18, 18)
-                .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtTipe, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_typemobil))
-                .addGap(18, 18, 18)
+                .addGap(27, 27, 27)
                 .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(bg_whiteLayout.createSequentialGroup()
-                        .addComponent(cmbTahunProduksi, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bg_whiteLayout.createSequentialGroup()
-                        .addComponent(lbl_thnproduksi)
-                        .addGap(21, 21, 21)))
-                .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtHargaSewa, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_hrgsewa))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
-                .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_home, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn_submit, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(24, 24, 24))
+                        .addGap(64, 64, 64)
+                        .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lbl_hrgsewa)
+                            .addComponent(txtHargaSewa, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 202, Short.MAX_VALUE)
+                        .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btn_home, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn_submit, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(24, 24, 24))
+                    .addGroup(bg_whiteLayout.createSequentialGroup()
+                        .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtMerk, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbl_merkmobil))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -176,6 +158,22 @@ public class KelolaMobil extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btn_homeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_homeActionPerformed
+    this.dispose();
+    Home a = new Home();
+    a.show();    // TODO add your handling code here:
+    }//GEN-LAST:event_btn_homeActionPerformed
+
+    private void btn_submitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_submitActionPerformed
+        Mobil m = new Mobil();
+        m.setPlat(txtNoPol.getText());
+        m.setJenisMobil(txtMerk.getText());
+        m.setHarga(Integer.parseInt(txtHargaSewa.getText()));
+        cM.insertMobilSQL(m);
+        
+    // TODO add your handling code here:
+    }//GEN-LAST:event_btn_submitActionPerformed
 
     /**
      * @param args the command line arguments
@@ -216,17 +214,32 @@ public class KelolaMobil extends javax.swing.JFrame {
     private javax.swing.JPanel bg_white;
     private javax.swing.JButton btn_home;
     private javax.swing.JButton btn_submit;
-    private javax.swing.JComboBox cmbTahunProduksi;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lbl_hrgsewa;
     private javax.swing.JLabel lbl_merkmobil;
     private javax.swing.JLabel lbl_nopolisi;
-    private javax.swing.JLabel lbl_thnproduksi;
-    private javax.swing.JLabel lbl_typemobil;
     private javax.swing.JLabel pic_kelolamobil;
     private javax.swing.JTextField txtHargaSewa;
     private javax.swing.JTextField txtMerk;
     private javax.swing.JTextField txtNoPol;
-    private javax.swing.JTextField txtTipe;
     // End of variables declaration//GEN-END:variables
+    
+    public JButton getButtonHome(){
+        return btn_home;
+    }
+    public JButton getButtonSubmit(){
+        return btn_submit;
+    }
+    public JTextField getTxtNoPol(){
+        return txtNoPol;
+    }
+    public JTextField getTxtMerk(){
+        return txtMerk;
+    }
+    public JTextField getTxtHargaSewa(){
+        return txtHargaSewa;
+    }
+    
+    
 }
+   

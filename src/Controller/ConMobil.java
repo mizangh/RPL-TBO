@@ -23,8 +23,10 @@ public class ConMobil {
 
     private ArrayList<Mobil> listMobil;
     private Connection koneksi;
+    private Mobil mobil;
 
     public ConMobil() {
+        mobil = new Mobil();
         listMobil = new ArrayList<>();
         koneksi = Koneksi.getKoneksi();
     }
