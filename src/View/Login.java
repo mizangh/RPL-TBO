@@ -96,10 +96,10 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_txtUsernameActionPerformed
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-           if(txtUsername.getText() == "admin" && txtPassword.getText() == "admin"){
-               
-                
-           } // TODO add your handling code here:
+        // TODO add your handling code here:
+        if (txtUsername.getText() == "admin" && txtPassword.getText() == "admin") {
+
+        }
     }//GEN-LAST:event_btnLoginActionPerformed
 
     /**

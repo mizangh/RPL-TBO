@@ -252,15 +252,17 @@ public class KelolaSupir extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_homeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_homeActionPerformed
+        // TODO add your handling code here:
         this.dispose();
         Home a = new Home();
-        a.show();  // TODO add your handling code here:
+        a.show();
     }//GEN-LAST:event_btn_homeActionPerformed
 
     private void btn_home1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_home1ActionPerformed
+        // TODO add your handling code here:
         this.dispose();
         Home a = new Home();
-        a.show();  // TODO add your handling code here:
+        a.show();
     }//GEN-LAST:event_btn_home1ActionPerformed
 
     private void btn_submitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_submitActionPerformed

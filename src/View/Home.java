@@ -298,45 +298,51 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_kelolamobil1ActionPerformed
 
     private void btnKelolaPengembalianActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKelolaPengembalianActionPerformed
+        // TODO add your handling code here:
         this.hide();
         bg_white1.removeAll();
         KelolaPengembalian kpe = new KelolaPengembalian();
         kpe.setVisible(true);
-        bg_white1.add(kpe);    // TODO add your handling code here:
+        bg_white1.add(kpe);
     }//GEN-LAST:event_btnKelolaPengembalianActionPerformed
 
     private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
-        System.exit(0);        // TODO add your handling code here:
+        // TODO add your handling code here:
+        System.exit(0);
     }//GEN-LAST:event_btnExitActionPerformed
 
     private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
+        // TODO add your handling code here:
         dispose();
         Login Lg = new Login();
-        Lg.setVisible(true);// TODO add your handling code here:
+        Lg.setVisible(true);
     }//GEN-LAST:event_btnLogoutActionPerformed
 
     private void btnKelolaPemesananActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKelolaPemesananActionPerformed
+        // TODO add your handling code here:
         this.hide();
         bg_white1.removeAll();
         KelolaPemesanan kp = new KelolaPemesanan();
         kp.setVisible(true);
-        bg_white1.add(kp);    // TODO add your handling code here:
+        bg_white1.add(kp);
     }//GEN-LAST:event_btnKelolaPemesananActionPerformed
 
     private void btnTransaksi2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTransaksi2ActionPerformed
+        // TODO add your handling code here:
         this.hide();
         bg_white1.removeAll();
         Transaksi Tr = new Transaksi();
         Tr.setVisible(true);
-        bg_white1.add(Tr);    // TODO add your handling code here:
+        bg_white1.add(Tr);
     }//GEN-LAST:event_btnTransaksi2ActionPerformed
 
     private void btnTransaksi3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTransaksi3ActionPerformed
+        // TODO add your handling code here:
         this.hide();
         bg_white1.removeAll();
         Transaksi Tr = new Transaksi();
         Tr.setVisible(true);
-        bg_white1.add(Tr);    // TODO add your handling code here:
+        bg_white1.add(Tr);
     }//GEN-LAST:event_btnTransaksi3ActionPerformed
 
     /**

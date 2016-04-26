@@ -211,9 +211,10 @@ public class Transaksi extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_homeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_homeActionPerformed
-    this.dispose();
-    Home a = new Home();
-    a.show();        // TODO add your handling code here:
+        // TODO add your handling code here:
+        this.dispose();
+        Home a = new Home();
+        a.show();
     }//GEN-LAST:event_btn_homeActionPerformed
 
     /**

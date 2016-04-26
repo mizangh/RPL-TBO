@@ -350,142 +350,159 @@ public class HomeAdmin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnKelolaMobilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKelolaMobilActionPerformed
+        // TODO add your handling code here:
         this.hide();
         bg_white1.removeAll();
         KelolaMobil km = new KelolaMobil();
         km.setVisible(true);
-        bg_white1.add(km);    // TODO add your handling code here:
+        bg_white1.add(km);
     }//GEN-LAST:event_btnKelolaMobilActionPerformed
 
     private void btnKelolaPemesananActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKelolaPemesananActionPerformed
+        // TODO add your handling code here:
         this.hide();
         bg_white1.removeAll();
         KelolaPemesanan kp = new KelolaPemesanan();
         kp.setVisible(true);
-        bg_white1.add(kp);    // TODO add your handling code here:
+        bg_white1.add(kp);
     }//GEN-LAST:event_btnKelolaPemesananActionPerformed
 
     private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
+        // TODO add your handling code here:
         dispose();
         Login Lg = new Login();
-        Lg.setVisible(true);// TODO add your handling code here:
+        Lg.setVisible(true);
     }//GEN-LAST:event_btnLogoutActionPerformed
 
     private void btnTransaksiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTransaksiActionPerformed
+        // TODO add your handling code here:
         this.hide();
         bg_white1.removeAll();
         Transaksi Tr = new Transaksi();
         Tr.setVisible(true);
-        bg_white1.add(Tr);    // TODO add your handling code here:
+        bg_white1.add(Tr);
     }//GEN-LAST:event_btnTransaksiActionPerformed
 
     private void btnReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReportActionPerformed
+        // TODO add your handling code here:
         this.hide();
         Report Rp = new Report();
         Rp.show();
-        // TODO add your handling code here:
     }//GEN-LAST:event_btnReportActionPerformed
 
     private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
-        System.exit(0);        // TODO add your handling code here:
+        // TODO add your handling code here:
+        System.exit(0);
     }//GEN-LAST:event_btnExitActionPerformed
 
     private void btnKelolaPengembalianActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKelolaPengembalianActionPerformed
+        // TODO add your handling code here:
         this.hide();
         bg_white1.removeAll();
         KelolaPengembalian kpe = new KelolaPengembalian();
         kpe.setVisible(true);
-        bg_white1.add(kpe);    // TODO add your handling code here:
+        bg_white1.add(kpe);
     }//GEN-LAST:event_btnKelolaPengembalianActionPerformed
 
     private void btnKelolaMobil1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKelolaMobil1ActionPerformed
+        // TODO add your handling code here:
         this.hide();
         bg_white1.removeAll();
         KelolaMobil km = new KelolaMobil();
         km.setVisible(true);
-        bg_white1.add(km);    // TODO add your handling code here:
+        bg_white1.add(km);
     }//GEN-LAST:event_btnKelolaMobil1ActionPerformed
 
     private void btnKelolaPemesanan1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKelolaPemesanan1ActionPerformed
+        // TODO add your handling code here:
         this.hide();
         bg_white1.removeAll();
         KelolaPemesanan kp = new KelolaPemesanan();
         kp.setVisible(true);
-        bg_white1.add(kp);    // TODO add your handling code here:
+        bg_white1.add(kp);
     }//GEN-LAST:event_btnKelolaPemesanan1ActionPerformed
 
     private void btnLogout1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogout1ActionPerformed
+        // TODO add your handling code here:
         dispose();
         Login Lg = new Login();
-        Lg.setVisible(true);// TODO add your handling code here:
+        Lg.setVisible(true);
     }//GEN-LAST:event_btnLogout1ActionPerformed
 
     private void btnTransaksi1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTransaksi1ActionPerformed
+        // TODO add your handling code here:
         this.hide();
         bg_white1.removeAll();
         Transaksi Tr = new Transaksi();
         Tr.setVisible(true);
-        bg_white1.add(Tr);    // TODO add your handling code here:
+        bg_white1.add(Tr);
     }//GEN-LAST:event_btnTransaksi1ActionPerformed
 
     private void btnReport1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReport1ActionPerformed
+        // TODO add your handling code here:
         this.hide();
         Report Rp = new Report();
         Rp.show();
-        // TODO add your handling code here:
     }//GEN-LAST:event_btnReport1ActionPerformed
 
     private void btnExit1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExit1ActionPerformed
-        System.exit(0);        // TODO add your handling code here:
+        // TODO add your handling code here:
+        System.exit(0);
     }//GEN-LAST:event_btnExit1ActionPerformed
 
     private void btnKelolaPengembalian1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKelolaPengembalian1ActionPerformed
+        // TODO add your handling code here:
         this.hide();
         bg_white1.removeAll();
         KelolaPengembalian kpe = new KelolaPengembalian();
         kpe.setVisible(true);
-        bg_white1.add(kpe);    // TODO add your handling code here:
+        bg_white1.add(kpe);
     }//GEN-LAST:event_btnKelolaPengembalian1ActionPerformed
 
     private void btnLogout2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogout2ActionPerformed
+        // TODO add your handling code here:
         dispose();
         Login Lg = new Login();
-        Lg.setVisible(true);// TODO add your handling code here:
+        Lg.setVisible(true);
     }//GEN-LAST:event_btnLogout2ActionPerformed
 
     private void btnTransaksi2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTransaksi2ActionPerformed
+        // TODO add your handling code here:
         this.hide();
         bg_white1.removeAll();
         Transaksi Tr = new Transaksi();
         Tr.setVisible(true);
-        bg_white1.add(Tr);    // TODO add your handling code here:
+        bg_white1.add(Tr);
     }//GEN-LAST:event_btnTransaksi2ActionPerformed
 
     private void btnReport2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReport2ActionPerformed
+        // TODO add your handling code here:
         this.hide();
         Report Rp = new Report();
         Rp.show();
-        // TODO add your handling code here:
     }//GEN-LAST:event_btnReport2ActionPerformed
 
     private void btnExit2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExit2ActionPerformed
-        System.exit(0);        // TODO add your handling code here:
+        // TODO add your handling code here:
+        System.exit(0);
     }//GEN-LAST:event_btnExit2ActionPerformed
 
     private void btnKelolaSupirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKelolaSupirActionPerformed
+        // TODO add your handling code here:
         this.hide();
         bg_white1.removeAll();
         KelolaSupir kpe = new KelolaSupir();
         kpe.setVisible(true);
-        bg_white1.add(kpe);    // TODO add your handling code here:
+        bg_white1.add(kpe);
     }//GEN-LAST:event_btnKelolaSupirActionPerformed
 
     private void btnKelolaMobil2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKelolaMobil2ActionPerformed
+        // TODO add your handling code here:
         this.hide();
         bg_white1.removeAll();
         KelolaMobil km = new KelolaMobil();
         km.setVisible(true);
-        bg_white1.add(km);    // TODO add your handling code here:
+        bg_white1.add(km);
     }//GEN-LAST:event_btnKelolaMobil2ActionPerformed
 
     /**

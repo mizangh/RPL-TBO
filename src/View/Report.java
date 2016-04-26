@@ -129,9 +129,10 @@ public class Report extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHomeActionPerformed
-    this.dispose();
-    Home a = new Home();
-    a.show();        // TODO add your handling code here:
+        // TODO add your handling code here:
+        this.dispose();
+        Home a = new Home();
+        a.show();
     }//GEN-LAST:event_btnHomeActionPerformed
 
     /**
