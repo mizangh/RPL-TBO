@@ -5,6 +5,10 @@
  */
 package Model;
 
+import Controller.*;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -17,7 +21,10 @@ public class Transaksi {
     private Supir supir;
     private Date tanggalPesan;
     private Date tanggalKembali;
+    private int Hari;
 
+    public Transaksi(){
+    }
     public Transaksi(Mobil mobil, Pemesan pemesan, Date tanggalPesan) {
         this.mobil = mobil;
         this.pemesan = pemesan;
@@ -31,12 +38,30 @@ public class Transaksi {
         this.tanggalPesan = tanggalPesan;
     }
 
-    public Date getTanggalKembali() {
-        return tanggalKembali;
+    public Date getTanggalPesan() {
+        return tanggalPesan;
+    }
+    
+
+    public void setTanggalPesan(Date tanggalPesan) {
+        this.tanggalPesan = tanggalPesan;
     }
 
-    public void setTanggalKembali(Date tanggalKembali) {
-        this.tanggalKembali = tanggalKembali;
+    public void setDurasi(int Hari){
+        this.Hari = Hari;
+    }
+    public int getDurasi(){
+        return Hari;
+    }
+
+    public void setTanggalKembali(Date tanggalKembali){
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(tanggalKembali);
+        cal.add(Calendar.DATE, Hari);
+        this.tanggalKembali = cal.getTime();
+    }   
+    public Date getTanggalKembali() {
+        return tanggalKembali;
     }
      
 }

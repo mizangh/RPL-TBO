@@ -11,7 +11,8 @@ package Model;
  */
 public class Supir {
 
-    private String idSupir;
+    private int idSupir;
+    private int noTelp;
     private String namaSupir;
     private double hargaSupir;
     private boolean status;
@@ -19,18 +20,27 @@ public class Supir {
     public Supir() {
     }
 
-    public Supir(String idSupir, String namaSupir, double hargaSupir) {
+    public Supir(int idSupir, String namaSupir, double hargaSupir, int noTelp) {
         this.idSupir = idSupir;
+        this.noTelp = noTelp;
         this.namaSupir = namaSupir;
         this.hargaSupir = hargaSupir;
         this.status = false;
     }
 
-    public String getIdSupir() {
+    public int getIdSupir() {
         return idSupir;
     }
 
-    public void setIdSupir(String idSupir) {
+    public int getNoTelp() {
+        return noTelp;
+    }
+
+    public void setNoTelp(int noTelp) {
+        this.noTelp = noTelp;
+    }
+
+    public void setIdSupir(int idSupir) {
         this.idSupir = idSupir;
     }
 

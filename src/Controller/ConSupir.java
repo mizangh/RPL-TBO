@@ -31,13 +31,13 @@ public class ConSupir {
     public String generateID() {
         return "SU" + listSupir.size();
     }
-
+/*
     public void addSupir(String namaSupir, double hargaSupir) {
         Supir supir = new Supir(generateID(), namaSupir, hargaSupir);
         listSupir.add(supir);
     }
-
-    public void editSupir(String idSupir, double hargaSupir) {
+*/
+  /*  public void editSupir(int idSupir, double hargaSupir) {
         for (int i = 0; i < listSupir.size(); i++) {
             if (listSupir.get(i).getIdSupir().equals(idSupir)) {
                 listSupir.get(i).setHargaSupir(hargaSupir);
@@ -52,16 +52,16 @@ public class ConSupir {
             }
         }
     }
-
+*/
     public ArrayList<Supir> getSupir() {
         return listSupir;
     }
     
-    public void insertSupirlSQL(Supir s) {
+    public void insertSupirSQL(Supir s) {
         PreparedStatement Statement = null;
         try {
-            Statement = koneksi.prepareStatement("insert into supir (idSupir, namaSupir, hargaSupir, status) values (?,?,?,?)");
-            Statement.setString(1, s.getIdSupir());
+            Statement = koneksi.prepareStatement("insert into supir (noTelp, namaSupir, hargaSupir, status) values (?,?,?,?)");
+            Statement.setInt(1, s.getNoTelp());
             Statement.setString(2, s.getNamaSupir());
             Statement.setDouble(3, s.getHargaSupir());
             Statement.setBoolean(4, s.getStatus());
@@ -82,11 +82,12 @@ public class ConSupir {
     public void updateSupirSQL(Supir s) {
         PreparedStatement Statement = null;
         try {
-            Statement = koneksi.prepareStatement("update super set namaSupir=?, hargaSupir=?, status=? where idSupir=? ");
-            Statement.setString(1, s.getNamaSupir());
-            Statement.setDouble(2, s.getHargaSupir());
-            Statement.setBoolean(3, true);
-            Statement.setString(4, s.getIdSupir());
+            Statement = koneksi.prepareStatement("update supir set noTelp=?, namaSupir=?, hargaSupir=?, status=? where idSupir=? ");
+            Statement.setInt(1, s.getNoTelp());
+            Statement.setString(2, s.getNamaSupir());
+            Statement.setDouble(3, s.getHargaSupir());
+            Statement.setBoolean(4, true);
+            Statement.setInt(5, s.getIdSupir());
             Statement.executeUpdate();
         } catch (SQLException ex) {
             ex.printStackTrace();
@@ -104,7 +105,7 @@ public class ConSupir {
     public void deleteSupirSQL(String idSupir) {
         PreparedStatement Statement = null;
         try {
-            Statement = koneksi.prepareStatement("delete from mobil where idSupir=? ;");
+            Statement = koneksi.prepareStatement("delete from supir where idSupir=? ;");
             Statement.setString(1, idSupir);
             Statement.executeUpdate();
         } catch (SQLException ex) {
