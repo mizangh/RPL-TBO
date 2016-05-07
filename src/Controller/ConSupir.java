@@ -31,13 +31,14 @@ public class ConSupir {
     public String generateID() {
         return "SU" + listSupir.size();
     }
-/*
+
+    /*
     public void addSupir(String namaSupir, double hargaSupir) {
         Supir supir = new Supir(generateID(), namaSupir, hargaSupir);
         listSupir.add(supir);
     }
-*/
-  /*  public void editSupir(int idSupir, double hargaSupir) {
+     */
+ /*  public void editSupir(int idSupir, double hargaSupir) {
         for (int i = 0; i < listSupir.size(); i++) {
             if (listSupir.get(i).getIdSupir().equals(idSupir)) {
                 listSupir.get(i).setHargaSupir(hargaSupir);
@@ -52,16 +53,16 @@ public class ConSupir {
             }
         }
     }
-*/
+     */
     public ArrayList<Supir> getSupir() {
         return listSupir;
     }
-    
+
     public void insertSupirSQL(Supir s) {
         PreparedStatement Statement = null;
         try {
             Statement = koneksi.prepareStatement("insert into supir (noTelp, namaSupir, hargaSupir, status) values (?,?,?,?)");
-            Statement.setInt(1, s.getNoTelp());
+            Statement.setString(1, s.getNoTelp());
             Statement.setString(2, s.getNamaSupir());
             Statement.setDouble(3, s.getHargaSupir());
             Statement.setBoolean(4, s.getStatus());
@@ -83,7 +84,7 @@ public class ConSupir {
         PreparedStatement Statement = null;
         try {
             Statement = koneksi.prepareStatement("update supir set noTelp=?, namaSupir=?, hargaSupir=?, status=? where idSupir=? ");
-            Statement.setInt(1, s.getNoTelp());
+            Statement.setString(1, s.getNoTelp());
             Statement.setString(2, s.getNamaSupir());
             Statement.setDouble(3, s.getHargaSupir());
             Statement.setBoolean(4, true);
@@ -120,7 +121,5 @@ public class ConSupir {
             }
         }
     }
-    
-    
 
 }

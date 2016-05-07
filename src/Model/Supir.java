@@ -12,7 +12,7 @@ package Model;
 public class Supir {
 
     private int idSupir;
-    private int noTelp;
+    private String noTelp;
     private String namaSupir;
     private double hargaSupir;
     private boolean status;
@@ -20,8 +20,7 @@ public class Supir {
     public Supir() {
     }
 
-    public Supir(int idSupir, String namaSupir, double hargaSupir, int noTelp) {
-        this.idSupir = idSupir;
+    public Supir(String namaSupir, double hargaSupir, String noTelp) {
         this.noTelp = noTelp;
         this.namaSupir = namaSupir;
         this.hargaSupir = hargaSupir;
@@ -32,11 +31,11 @@ public class Supir {
         return idSupir;
     }
 
-    public int getNoTelp() {
+    public String getNoTelp() {
         return noTelp;
     }
 
-    public void setNoTelp(int noTelp) {
+    public void setNoTelp(String noTelp) {
         this.noTelp = noTelp;
     }
 

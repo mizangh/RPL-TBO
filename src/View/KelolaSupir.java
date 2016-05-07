@@ -5,6 +5,9 @@
  */
 package View;
 
+import Controller.ConSupir;
+import Model.Supir;
+
 /**
  *
  * @author Nikho Sagala
@@ -50,12 +53,14 @@ public class KelolaSupir extends javax.swing.JFrame {
         pic_kelolapengembalian1 = new javax.swing.JLabel();
         lbl_datamobil1 = new javax.swing.JLabel();
         lbl_nopolisi1 = new javax.swing.JLabel();
-        txt_nohandphone = new javax.swing.JTextField();
+        txtNoHP = new javax.swing.JTextField();
         lbl_nmpeminjam1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         btn_submit = new javax.swing.JButton();
         btn_home1 = new javax.swing.JButton();
-        txt_namasupir = new javax.swing.JTextField();
+        txtNamaSupir = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        txtHarga = new javax.swing.JTextField();
 
         bg_white.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -207,7 +212,7 @@ public class KelolaSupir extends javax.swing.JFrame {
         lbl_nopolisi1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbl_nopolisi1.setText("Nama Supir");
         bg_white1.add(lbl_nopolisi1, new org.netbeans.lib.awtextra.AbsoluteConstraints(102, 166, -1, -1));
-        bg_white1.add(txt_nohandphone, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 200, 183, 31));
+        bg_white1.add(txtNoHP, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 200, 183, 31));
 
         lbl_nmpeminjam1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbl_nmpeminjam1.setText("No Handphone");
@@ -235,7 +240,14 @@ public class KelolaSupir extends javax.swing.JFrame {
             }
         });
         bg_white1.add(btn_home1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 380, 110, 52));
-        bg_white1.add(txt_namasupir, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 160, 183, 31));
+        bg_white1.add(txtNamaSupir, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 160, 183, 31));
+
+        jLabel2.setText("Harga");
+        bg_white1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 240, -1, -1));
+
+        txtHarga.setText("Rp. 100,000,-");
+        txtHarga.setEnabled(false);
+        bg_white1.add(txtHarga, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 240, 180, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -267,6 +279,12 @@ public class KelolaSupir extends javax.swing.JFrame {
 
     private void btn_submitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_submitActionPerformed
         // TODO add your handling code here:
+        String nama = txtNamaSupir.getText();
+        String nohp = txtNoHP.getText();
+        double harga = 150000;
+        Supir s = new Supir(nama, harga , nohp);
+        ConSupir cs = new ConSupir();
+        cs.insertSupirSQL(s);
     }//GEN-LAST:event_btn_submitActionPerformed
 
     /**
@@ -313,6 +331,7 @@ public class KelolaSupir extends javax.swing.JFrame {
     private javax.swing.JButton btn_kembalikanmobil;
     private javax.swing.JButton btn_submit;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel lbl_datamobil;
@@ -332,8 +351,9 @@ public class KelolaSupir extends javax.swing.JFrame {
     private javax.swing.JLabel lbl_tglpinjam;
     private javax.swing.JLabel pic_kelolapengembalian;
     private javax.swing.JLabel pic_kelolapengembalian1;
-    private javax.swing.JTextField txt_namasupir;
-    private javax.swing.JTextField txt_nohandphone;
+    private javax.swing.JTextField txtHarga;
+    private javax.swing.JTextField txtNamaSupir;
+    private javax.swing.JTextField txtNoHP;
     private javax.swing.JTextField txt_nopolisi;
     // End of variables declaration//GEN-END:variables
 }
