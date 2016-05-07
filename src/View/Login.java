@@ -33,11 +33,11 @@ public class Login extends javax.swing.JFrame {
         jTextField3 = new javax.swing.JTextField();
         lbl_username = new javax.swing.JLabel();
         lbl_password = new javax.swing.JLabel();
-        txtPassword = new javax.swing.JTextField();
         txtUsername = new javax.swing.JTextField();
         lbl_login = new javax.swing.JLabel();
         btnLogin = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        txtPassword = new javax.swing.JPasswordField();
 
         jLabel1.setText("jLabel1");
 
@@ -56,13 +56,6 @@ public class Login extends javax.swing.JFrame {
         lbl_password.setText("Password");
         getContentPane().add(lbl_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 180, -1, -1));
 
-        txtPassword.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtPasswordActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 170, 140, 30));
-
         txtUsername.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtUsernameActionPerformed(evt);
@@ -80,16 +73,13 @@ public class Login extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 210, 80, -1));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon("D:\\Documents\\NetBeansProjects\\RPL-TBO-branch\\src\\assets\\login.jpg")); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        txtPassword.setText("jPasswordField1");
+        getContentPane().add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 180, 140, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void txtPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPasswordActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtPasswordActionPerformed
 
     private void txtUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsernameActionPerformed
         // TODO add your handling code here:
@@ -97,8 +87,17 @@ public class Login extends javax.swing.JFrame {
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         // TODO add your handling code here:
-        if (txtUsername.getText() == "admin" && txtPassword.getText() == "admin") {
-
+        String pass = new String(txtPassword.getPassword());
+        if (txtUsername.getText().equals("admin") && pass.equals("admin")) {
+            HomeAdmin ha = new HomeAdmin();
+            ha.setVisible(true);
+            this.setVisible(false);
+            this.dispose();
+        } else if (txtUsername.getText().equals("petugas") && pass.equals("petugas")) {
+            Home h = new Home();
+            h.setVisible(true);
+            this.setVisible(false);
+            this.dispose();
         }
     }//GEN-LAST:event_btnLoginActionPerformed
 
@@ -148,7 +147,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel lbl_login;
     private javax.swing.JLabel lbl_password;
     private javax.swing.JLabel lbl_username;
-    private javax.swing.JTextField txtPassword;
+    private javax.swing.JPasswordField txtPassword;
     private javax.swing.JTextField txtUsername;
     // End of variables declaration//GEN-END:variables
 }
