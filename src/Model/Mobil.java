@@ -25,6 +25,8 @@ public class Mobil {
         this.harga = harga;
         this.status = false;
     }
+    
+    
 
     public String getJenisMobil() {
         return jenisMobil;
