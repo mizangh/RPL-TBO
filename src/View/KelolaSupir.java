@@ -242,6 +242,7 @@ public class KelolaSupir extends javax.swing.JFrame {
         bg_white1.add(btn_home1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 380, 110, 52));
         bg_white1.add(txtNamaSupir, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 160, 183, 31));
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setText("Harga");
         bg_white1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 240, -1, -1));
 
