@@ -29,9 +29,11 @@ public class ConPemesan {
     public void insertPemesanSQL(Pemesan p) {
         PreparedStatement Statement = null;
         try {
-            Statement = koneksi.prepareStatement("insert into pemesan (namaPemesan, noTelpPemesan) values (?,?)");
-            Statement.setString(1, p.getNamaPemesan());
-            Statement.setInt(2, p.getNoTelpPemesan());
+            Statement = koneksi.prepareStatement("insert into pemesan (noKtp,plat,namaPemesan,noTelpPemesan) values (?,?,?,?)");
+            Statement.setString(1, p.getNoKtp());
+            Statement.setString(2, p.getPlat());
+            Statement.setString(3, p.getNamaPemesan());
+            Statement.setInt(4, p.getNoTelpPemesan());
             Statement.executeUpdate();
         } catch (SQLException ex) {
             ex.printStackTrace();
@@ -52,7 +54,7 @@ public class ConPemesan {
             Statement = koneksi.prepareStatement("update pemesan set namaPemesan=?, noTelpPemesan=? where id_pemesan=? ");
             Statement.setString(1, p.getNamaPemesan());
             Statement.setInt(2, p.getNoTelpPemesan());
-            Statement.setInt(3, p.getId_pemesan());
+            Statement.setString(3, p.getNoKtp());
             Statement.executeUpdate();
         } catch (SQLException ex) {
             ex.printStackTrace();

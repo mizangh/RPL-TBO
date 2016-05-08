@@ -6,8 +6,10 @@
 package View;
 
 import Controller.ConMobil;
+import Model.Mobil;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 /**
  *
@@ -20,17 +22,11 @@ public class Console {
         ConMobil cM = new ConMobil();
         //cM.addMobil("Innova", "D 1234 F", 300000);
         //cM.insertMobilSQL(cM.getMobil("Innova"));
-        /*List<Mobil> lm = cM.getMobilSQL("Innova");
+        List<Mobil> lm = cM.getMobilSQL("Innova");
         for (int i = 0; i < lm.size(); i++) {
-                System.out.println(lm.get(i));
-                
-        }*/
-        Calendar cal = Calendar.getInstance();
-        
-        Date d = new Date();
-        cal.setTime(d);
-        cal.add(Calendar.DATE, 2);
-        System.out.println(d);
+                System.out.println(lm.get(i));        
+        }
+ 
     }
 }
 

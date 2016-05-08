@@ -16,6 +16,7 @@ import java.util.Date;
  * @author Nikho Sagala
  */
 public class Transaksi {
+    private int id_transaksi;
     private Mobil mobil;
     private Pemesan pemesan;
     private Supir supir;
@@ -37,12 +38,24 @@ public class Transaksi {
         this.supir = supir;
         this.tanggalPesan = tanggalPesan;
     }
-
+    
+    public String getPlat(){
+        return mobil.getJenisMobil();
+    }
+    
+    public String getNoKtp(){
+        return pemesan.getNoKtp();
+    }
+    
+    public int getIdSupir(){
+        return supir.getIdSupir();
+    }
+    
     public Date getTanggalPesan() {
         return tanggalPesan;
     }
     
-
+    
     public void setTanggalPesan(Date tanggalPesan) {
         this.tanggalPesan = tanggalPesan;
     }

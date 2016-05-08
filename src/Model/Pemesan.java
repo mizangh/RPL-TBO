@@ -10,25 +10,31 @@ package Model;
  * @author Nikho Sagala
  */
 public class Pemesan {
-    private int id_pemesan;
+    private Mobil m;
+    private String noKtp;
     private String namaPemesan;
     private int noTelpPemesan;
     
     public Pemesan(){
     
     }
-    public Pemesan(int id_pemesan, String namaPemesan, int noTelpPemesan) {
-        this.id_pemesan = id_pemesan;
+    public Pemesan(String id_pemesan, String namaPemesan, int noTelpPemesan) {
+        m = new Mobil();
+        this.noKtp = id_pemesan;
         this.namaPemesan = namaPemesan;
         this.noTelpPemesan = noTelpPemesan;
     }
 
-    public int getId_pemesan() {
-        return id_pemesan;
+    public String getPlat(){
+        return m.getPlat();
+    }
+    
+    public String getNoKtp() {
+        return noKtp;
     }
 
-    public void setId_pemesan(int id_pemesan) {
-        this.id_pemesan = id_pemesan;
+    public void setNoKtp(String id_pemesan) {
+        this.noKtp = id_pemesan;
     }
 
     public int getNoTelpPemesan() {
