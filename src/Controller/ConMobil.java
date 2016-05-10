@@ -154,7 +154,7 @@ public class ConMobil {
         List<Mobil> lm = null;
         try {
             lm = new ArrayList<Mobil>();
-            PreparedStatement Statement = koneksi.prepareStatement("select * from mobil where jenisMobil=? and Status=1");
+            PreparedStatement Statement = koneksi.prepareStatement("select * from mobil where jenisMobil=? and Status=0");
             Statement.setString(1, Jenis);
             ResultSet rs = Statement.executeQuery();
             while (rs.next()) {

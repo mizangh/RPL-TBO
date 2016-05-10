@@ -5,11 +5,15 @@
  */
 package Controller;
 
+import Model.Mobil;
 import Model.Pemesan;
 import Model.Supir;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -87,6 +91,27 @@ public class ConPemesan {
                 }
             }
         }
+    }
+    
+    public List<Pemesan> getPemesanan(String plat) {
+        List<Pemesan> lm = null;
+        try {
+            lm = new ArrayList<Pemesan>();
+            PreparedStatement Statement = koneksi.prepareStatement("select * from mobil where plat=?");
+            Statement.setString(1, plat);
+            ResultSet rs = Statement.executeQuery();
+            while (rs.next()) {
+                Pemesan m = new Pemesan();
+                m.setNamaPemesan(rs.getString("namaPemesan"));
+                m.setNoKtp(rs.getString("noKtp"));
+                m.setNoTelpPemesan(rs.getString("noTelpPemesan"));
+                lm.add(m);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(ConMobil.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return lm;
+
     }
 
 }
