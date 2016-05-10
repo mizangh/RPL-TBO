@@ -20,13 +20,7 @@ public class Console {
     public static void main(String[] args) {
         //Mobil Tes
         ConMobil cM = new ConMobil();
-        //cM.addMobil("Innova", "D 1234 F", 300000);
-        //cM.insertMobilSQL(cM.getMobil("Innova"));
-        List<Mobil> lm = cM.getMobilSQL("Innova");
-        for (int i = 0; i < lm.size(); i++) {
-                System.out.println(lm.get(i));        
-        }
- 
+        Mobil m = new Mobil("Innova", "D1234HD", 120000);
+        cM.updateStatMobil("D1234HD");
     }
 }
-

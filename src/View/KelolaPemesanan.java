@@ -5,6 +5,10 @@
  */
 package View;
 
+import Controller.ConMobil;
+import Controller.ConPemesan;
+import Model.Pemesan;
+
 /**
  *
  * @author Nikho Sagala
@@ -56,13 +60,13 @@ public class KelolaPemesanan extends javax.swing.JFrame {
         lbl_jenismobil1 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         cmbDurasi = new javax.swing.JComboBox();
-        txtNomorPelanggan = new javax.swing.JTextField();
+        txtNamaPelanggan = new javax.swing.JTextField();
         txtNoHp = new javax.swing.JTextField();
         lbl_perhari1 = new javax.swing.JLabel();
         cmbJenisMobil = new javax.swing.JComboBox();
         pic_people1 = new javax.swing.JLabel();
         lbl_totbiaya1 = new javax.swing.JLabel();
-        lbl_total1 = new javax.swing.JLabel();
+        txtTotal = new javax.swing.JLabel();
         btnSubmit = new javax.swing.JButton();
         btnHome = new javax.swing.JButton();
         pic_kelolapemesanan1 = new javax.swing.JLabel();
@@ -269,40 +273,34 @@ public class KelolaPemesanan extends javax.swing.JFrame {
         jLabel14.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel14.setText("Total Biaya");
 
-        cmbDurasi.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        cmbDurasi.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cmbDurasiActionPerformed(evt);
+        cmbDurasi.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1", "2", "3", "4", "5", "6" }));
+        cmbDurasi.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                cmbDurasiItemStateChanged(evt);
             }
         });
 
-        txtNomorPelanggan.setName(""); // NOI18N
+        txtNamaPelanggan.setName(""); // NOI18N
 
-        txtNoHp.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNoHpActionPerformed(evt);
-            }
-        });
+        lbl_perhari1.setText("Hari");
 
-        lbl_perhari1.setText("Perhari");
-
-        cmbJenisMobil.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        cmbJenisMobil.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cmbJenisMobilActionPerformed(evt);
-            }
-        });
+        cmbJenisMobil.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Innova", "Xenia", "APV", "Bemo", "Bajaj", "Mobil Rusak" }));
 
         lbl_totbiaya1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbl_totbiaya1.setText("Total Biaya");
 
-        lbl_total1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lbl_total1.setText("Total");
+        txtTotal.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtTotal.setText("Total");
 
         btnSubmit.setBackground(new java.awt.Color(255, 255, 255));
         btnSubmit.setIcon(new javax.swing.ImageIcon("D:\\Documents\\NetBeansProjects\\RPL-TBO-branch\\src\\assets\\arrow_right.png")); // NOI18N
         btnSubmit.setText("Submit");
         btnSubmit.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnSubmit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSubmitActionPerformed(evt);
+            }
+        });
 
         btnHome.setBackground(new java.awt.Color(255, 255, 255));
         btnHome.setIcon(new javax.swing.ImageIcon("D:\\Documents\\NetBeansProjects\\RPL-TBO-branch\\src\\assets\\home (1).jpg")); // NOI18N
@@ -315,12 +313,6 @@ public class KelolaPemesanan extends javax.swing.JFrame {
         });
 
         pic_kelolapemesanan1.setIcon(new javax.swing.ImageIcon("D:\\Documents\\NetBeansProjects\\RPL-TBO-branch\\src\\assets\\Kelola Pemesanan.jpg")); // NOI18N
-
-        txtNoKtp.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNoKtpActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout bg_white1Layout = new javax.swing.GroupLayout(bg_white1);
         bg_white1.setLayout(bg_white1Layout);
@@ -365,9 +357,9 @@ public class KelolaPemesanan extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(lbl_perhari1))
                             .addComponent(txtNoHp, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtNomorPelanggan, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtNamaPelanggan, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtNoKtp, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lbl_total1))
+                            .addComponent(txtTotal))
                         .addGap(117, 117, 117)))
                 .addComponent(btnSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(196, 196, 196))
@@ -384,7 +376,7 @@ public class KelolaPemesanan extends javax.swing.JFrame {
                     .addGroup(bg_white1Layout.createSequentialGroup()
                         .addGroup(bg_white1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lbl_nmpelanggan1)
-                            .addComponent(txtNomorPelanggan, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtNamaPelanggan, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(bg_white1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(bg_white1Layout.createSequentialGroup()
                                 .addGap(38, 38, 38)
@@ -418,7 +410,7 @@ public class KelolaPemesanan extends javax.swing.JFrame {
                         .addGap(405, 405, 405)
                         .addComponent(jLabel14))
                     .addGroup(bg_white1Layout.createSequentialGroup()
-                        .addComponent(lbl_total1)
+                        .addComponent(txtTotal)
                         .addGap(7, 7, 7)
                         .addGroup(bg_white1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnHome, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -466,28 +458,35 @@ public class KelolaPemesanan extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_noktp1ActionPerformed
 
-    private void cmbDurasiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbDurasiActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cmbDurasiActionPerformed
-
-    private void txtNoHpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNoHpActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtNoHpActionPerformed
-
-    private void cmbJenisMobilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbJenisMobilActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cmbJenisMobilActionPerformed
-
-    private void txtNoKtpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNoKtpActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtNoKtpActionPerformed
-
     private void btnHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHomeActionPerformed
         // TODO add your handling code here:
         this.dispose();
         Home a = new Home();
         a.show();
     }//GEN-LAST:event_btnHomeActionPerformed
+
+    private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
+        // TODO add your handling code here:
+        String nama = txtNamaPelanggan.getText();
+        String noKtp = txtNoKtp.getText();
+        String noHp = txtNoHp.getText();
+        Pemesan p = new Pemesan();
+        p.setNamaPemesan(nama);
+        p.setNoKtp(noKtp);
+        p.setNoTelpPemesan(noHp);
+        ConMobil cm = new ConMobil();
+        ConPemesan cp = new ConPemesan();
+        String plat = cm.getMobilSQL(cmbJenisMobil.getSelectedItem().toString()).get(0).getPlat();
+        cp.insertPemesanSQL(p, plat);
+        cm.updateStatMobil(plat);
+    }//GEN-LAST:event_btnSubmitActionPerformed
+
+    private void cmbDurasiItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cmbDurasiItemStateChanged
+        // TODO add your handling code here:
+        ConMobil cm = new ConMobil();
+        int an =  (int)(cmbDurasi.getSelectedItem()) * cm.getMobilSQL(cmbJenisMobil.getSelectedItem().toString()).get(0).getHarga();
+        txtTotal.setText(Integer.toString(an));
+    }//GEN-LAST:event_cmbDurasiItemStateChanged
 
     /**
      * @param args the command line arguments
@@ -553,7 +552,6 @@ public class KelolaPemesanan extends javax.swing.JFrame {
     private javax.swing.JLabel lbl_perhari;
     private javax.swing.JLabel lbl_perhari1;
     private javax.swing.JLabel lbl_total;
-    private javax.swing.JLabel lbl_total1;
     private javax.swing.JLabel lbl_totbiaya;
     private javax.swing.JLabel lbl_totbiaya1;
     private javax.swing.JLabel pic_formkelolapemesanan;
@@ -562,9 +560,10 @@ public class KelolaPemesanan extends javax.swing.JFrame {
     private javax.swing.JLabel pic_kelolapemesanan1;
     private javax.swing.JLabel pic_people;
     private javax.swing.JLabel pic_people1;
+    private javax.swing.JTextField txtNamaPelanggan;
     private javax.swing.JTextField txtNoHp;
     private javax.swing.JTextField txtNoKtp;
-    private javax.swing.JTextField txtNomorPelanggan;
+    private javax.swing.JLabel txtTotal;
     private javax.swing.JTextField txt_nmpelanggan;
     private javax.swing.JTextField txt_noktp;
     private javax.swing.JTextField txt_noktp1;

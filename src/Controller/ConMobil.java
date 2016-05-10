@@ -87,14 +87,34 @@ public class ConMobil {
         }
     }
 
-    public void updateMobilSQL(Mobil m) {
+    public void updateMobilSQL(String plat, int harga) {
         PreparedStatement Statement = null;
         try {
-            Statement = koneksi.prepareStatement("update mobil set jenisMobil=?, harga=?, Status=? where plat=? ");
-            Statement.setString(1, m.getJenisMobil());
-            Statement.setInt(2, m.getHarga());
-            Statement.setBoolean(3, true);
-            Statement.setString(4, m.getPlat());
+            Statement = koneksi.prepareStatement("update mobil set harga=?, Status=? where plat=? ");
+            Statement.setInt(1, harga);
+            Statement.setBoolean(2, true);
+            Statement.setString(3, plat);
+            Statement.executeUpdate();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        } finally {
+            if (Statement != null) {
+                try {
+
+                    Statement.close();
+                } catch (SQLException ex) {
+                    Logger.getLogger(ConMobil.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        }
+    }
+
+    public void updateStatMobil(String plat) {
+        PreparedStatement Statement = null;
+        try {
+            Statement = koneksi.prepareStatement("update mobil set Status=? where plat=? ");
+            Statement.setBoolean(1, true);
+            Statement.setString(2, plat);
             Statement.executeUpdate();
         } catch (SQLException ex) {
             ex.printStackTrace();
@@ -129,15 +149,15 @@ public class ConMobil {
             }
         }
     }
-    
-    public List<Mobil> getMobilSQL(String Jenis){
+
+    public List<Mobil> getMobilSQL(String Jenis) {
         List<Mobil> lm = null;
-        try{
+        try {
             lm = new ArrayList<Mobil>();
-            PreparedStatement Statement = koneksi.prepareStatement("select * from mobil where jenisMobil like ?");
-            Statement.setString(1,"%" + Jenis + "%");
+            PreparedStatement Statement = koneksi.prepareStatement("select * from mobil where jenisMobil=? and Status=1");
+            Statement.setString(1, Jenis);
             ResultSet rs = Statement.executeQuery();
-            while(rs.next()){
+            while (rs.next()) {
                 Mobil m = new Mobil();
                 m.setPlat(rs.getString("plat"));
                 m.setJenisMobil(rs.getString("jenisMobil"));
@@ -145,11 +165,11 @@ public class ConMobil {
                 m.setStatus(rs.getBoolean("Status"));
                 lm.add(m);
             }
-        }catch(SQLException ex){
-             Logger.getLogger(ConMobil.class.getName()).log(Level.SEVERE, null, ex);
-        }    
+        } catch (SQLException ex) {
+            Logger.getLogger(ConMobil.class.getName()).log(Level.SEVERE, null, ex);
+        }
         return lm;
-    
+
     }
 
 }

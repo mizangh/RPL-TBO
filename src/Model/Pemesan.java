@@ -10,25 +10,21 @@ package Model;
  * @author Nikho Sagala
  */
 public class Pemesan {
-    private Mobil m;
+
     private String noKtp;
     private String namaPemesan;
-    private int noTelpPemesan;
-    
-    public Pemesan(){
-    
-    }
-    public Pemesan(String id_pemesan, String namaPemesan, int noTelpPemesan) {
-        m = new Mobil();
-        this.noKtp = id_pemesan;
-        this.namaPemesan = namaPemesan;
-        this.noTelpPemesan = noTelpPemesan;
+    private String noHP;
+
+    public Pemesan() {
+
     }
 
-    public String getPlat(){
-        return m.getPlat();
+    public Pemesan(String id_pemesan, String namaPemesan, String noTelpPemesan) {
+        this.noKtp = id_pemesan;
+        this.namaPemesan = namaPemesan;
+        this.noHP = noTelpPemesan;
     }
-    
+
     public String getNoKtp() {
         return noKtp;
     }
@@ -37,12 +33,12 @@ public class Pemesan {
         this.noKtp = id_pemesan;
     }
 
-    public int getNoTelpPemesan() {
-        return noTelpPemesan;
+    public String getNoTelpPemesan() {
+        return noHP;
     }
 
-    public void setNoTelpPemesan(int noTelpPemesan) {
-        this.noTelpPemesan = noTelpPemesan;
+    public void setNoTelpPemesan(String noTelpPemesan) {
+        this.noHP = noTelpPemesan;
     }
 
     public String getNamaPemesan() {
@@ -52,5 +48,5 @@ public class Pemesan {
     public void setNamaPemesan(String namaPemesan) {
         this.namaPemesan = namaPemesan;
     }
-    
+
 }
