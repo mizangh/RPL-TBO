@@ -91,7 +91,6 @@ public class Transaksi extends javax.swing.JFrame {
         lblTotalBiaya.setText("lbl-totbiaya");
 
         btn_home.setBackground(new java.awt.Color(255, 255, 255));
-        btn_home.setIcon(new javax.swing.ImageIcon("D:\\Documents\\NetBeansProjects\\RPL-TBO-branch\\src\\assets\\home (1).jpg")); // NOI18N
         btn_home.setText("Home");
         btn_home.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btn_home.addActionListener(new java.awt.event.ActionListener() {
@@ -101,11 +100,13 @@ public class Transaksi extends javax.swing.JFrame {
         });
 
         btn_submit.setBackground(new java.awt.Color(255, 255, 255));
-        btn_submit.setIcon(new javax.swing.ImageIcon("D:\\Documents\\NetBeansProjects\\RPL-TBO-branch\\src\\assets\\arrow_right.png")); // NOI18N
         btn_submit.setText("Submit");
         btn_submit.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        pic_ftransaksi.setIcon(new javax.swing.ImageIcon("D:\\Documents\\NetBeansProjects\\RPL-TBO-branch\\src\\assets\\form Transaksi.jpg")); // NOI18N
+        btn_submit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_submitActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout bg_whiteLayout = new javax.swing.GroupLayout(bg_white);
         bg_white.setLayout(bg_whiteLayout);
@@ -204,7 +205,7 @@ public class Transaksi extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(bg_white, javax.swing.GroupLayout.PREFERRED_SIZE, 470, Short.MAX_VALUE)
+            .addComponent(bg_white, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -216,6 +217,10 @@ public class Transaksi extends javax.swing.JFrame {
         Home a = new Home();
         a.show();
     }//GEN-LAST:event_btn_homeActionPerformed
+
+    private void btn_submitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_submitActionPerformed
+                // TODO add your handling code here:
+    }//GEN-LAST:event_btn_submitActionPerformed
 
     /**
      * @param args the command line arguments
