@@ -5,11 +5,23 @@
  */
 package View;
 
+import Model.App;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import Controller.*;
+import Model.*;
+import java.util.List;
+
 /**
  *
  * @author gggggggggggggggggggg
  */
 public class Transaksi extends javax.swing.JFrame {
+
+    private App app;
 
     /**
      * Creates new form Transaksi
@@ -48,6 +60,8 @@ public class Transaksi extends javax.swing.JFrame {
         btn_submit = new javax.swing.JButton();
         pic_formtransaksi = new javax.swing.JLabel();
         pic_ftransaksi = new javax.swing.JLabel();
+        lbl_nopolisi1 = new javax.swing.JLabel();
+        lblSupir = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -59,6 +73,12 @@ public class Transaksi extends javax.swing.JFrame {
 
         lbl_nopolisi.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbl_nopolisi.setText("No.Polisi/Plat");
+
+        txtNoPol.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNoPolActionPerformed(evt);
+            }
+        });
 
         lbl_namapeminjam.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbl_namapeminjam.setText("Nama Peminjam");
@@ -108,6 +128,11 @@ public class Transaksi extends javax.swing.JFrame {
             }
         });
 
+        lbl_nopolisi1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbl_nopolisi1.setText("Nama Supir");
+
+        lblSupir.setText("jLabel2");
+
         javax.swing.GroupLayout bg_whiteLayout = new javax.swing.GroupLayout(bg_white);
         bg_white.setLayout(bg_whiteLayout);
         bg_whiteLayout.setHorizontalGroup(
@@ -130,7 +155,8 @@ public class Transaksi extends javax.swing.JFrame {
                             .addComponent(lbl_ktp)
                             .addComponent(lbl_namapeminjam)
                             .addComponent(lbl_nopolisi)
-                            .addComponent(lbl_datapeminjam))
+                            .addComponent(lbl_datapeminjam)
+                            .addComponent(lbl_nopolisi1))
                         .addGap(45, 45, 45)
                         .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblLamaPinjam)
@@ -139,8 +165,9 @@ public class Transaksi extends javax.swing.JFrame {
                                 .addComponent(lblNoHp)
                                 .addComponent(lblJenisMobil)
                                 .addComponent(lblNoKtp)
-                                .addComponent(lblNama)
-                                .addComponent(txtNoPol, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(txtNoPol, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lblSupir))
+                            .addComponent(lblNama)))
                     .addGroup(bg_whiteLayout.createSequentialGroup()
                         .addGap(16, 16, 16)
                         .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -166,10 +193,14 @@ public class Transaksi extends javax.swing.JFrame {
                 .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtNoPol, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbl_nopolisi))
-                .addGap(18, 18, 18)
+                .addGap(8, 8, 8)
+                .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_nopolisi1)
+                    .addComponent(lblSupir))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblNama)
-                    .addComponent(lbl_namapeminjam))
+                    .addComponent(lbl_namapeminjam, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblNoKtp)
@@ -213,14 +244,52 @@ public class Transaksi extends javax.swing.JFrame {
 
     private void btn_homeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_homeActionPerformed
         // TODO add your handling code here:
+
+        try {
+            App app = new App();
+            String a = "";
+            app.setDaftar(a);
+            app.saveData();
+        } catch (IOException ex) {
+            Logger.getLogger(Transaksi.class.getName()).log(Level.SEVERE, null, ex);
+        }
         this.dispose();
         Home a = new Home();
         a.show();
     }//GEN-LAST:event_btn_homeActionPerformed
 
     private void btn_submitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_submitActionPerformed
-                // TODO add your handling code here:
+
+        ConPemesan cp = new ConPemesan();
+        ConMobil cm = new ConMobil();
+        ConSupir cs = new ConSupir();
+        try {
+            String content = new String(Files.readAllBytes(Paths.get("Mobil.txt")));
+            String input = content.substring(7);
+            txtNoPol.setText(input);
+            List<Pemesan> lp = cp.getPemesanan(input);
+            String plat = lp.get(0).getPlat();
+            List<Mobil> lm = cm.getMobilSQLbyID(plat);
+            int idSupir = lp.get(0).getidSupir();
+            List<Supir> ls = cs.getSupirSQLbyID(idSupir);
+            if(idSupir != 0){
+                lblSupir.setText(ls.get(0).getNamaSupir());
+            }else{
+               lblSupir.setText("Tanpa Supir");
+            }
+            lblJenisMobil.setText(lm.get(0).getJenisMobil());
+            lblNama.setText(lp.get(0).getNamaPemesan());
+            lblNoKtp.setText(lp.get(0).getNoKtp());
+            lblNoHp.setText(lp.get(0).getNoTelpPemesan());
+        } catch (IOException ex) {
+            Logger.getLogger(Transaksi.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_btn_submitActionPerformed
+
+    private void txtNoPolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNoPolActionPerformed
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNoPolActionPerformed
 
     /**
      * @param args the command line arguments
@@ -267,6 +336,7 @@ public class Transaksi extends javax.swing.JFrame {
     private javax.swing.JLabel lblNama;
     private javax.swing.JLabel lblNoHp;
     private javax.swing.JLabel lblNoKtp;
+    private javax.swing.JLabel lblSupir;
     private javax.swing.JLabel lblTotalBiaya;
     private javax.swing.JLabel lbl_biaya;
     private javax.swing.JLabel lbl_datapeminjam;
@@ -276,6 +346,7 @@ public class Transaksi extends javax.swing.JFrame {
     private javax.swing.JLabel lbl_namapeminjam;
     private javax.swing.JLabel lbl_nohandphone;
     private javax.swing.JLabel lbl_nopolisi;
+    private javax.swing.JLabel lbl_nopolisi1;
     private javax.swing.JLabel pic_formtransaksi;
     private javax.swing.JLabel pic_ftransaksi;
     private javax.swing.JTextField txtNoPol;

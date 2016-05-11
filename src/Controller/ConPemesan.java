@@ -5,6 +5,7 @@
  */
 package Controller;
 
+import Connection.Koneksi;
 import Model.Mobil;
 import Model.Pemesan;
 import Model.Supir;
@@ -31,14 +32,16 @@ public class ConPemesan {
         koneksi = Koneksi.getKoneksi();
     }
 
-    public void insertPemesanSQL(Pemesan p, String plat) {
+    public void insertPemesanSQL(Pemesan p, String plat, Integer idSupir) {
         PreparedStatement Statement = null;
         try {
-            Statement = koneksi.prepareStatement("insert into pemesan (noKtp,plat,namaPemesan,noTelpPemesan) values (?,?,?,?)");
+            Statement = koneksi.prepareStatement("insert into pemesan (noKtp,plat,idSupir,namaPemesan,noTelpPemesan,Total) values (?,?,?,?,?,?)");
             Statement.setString(1, p.getNoKtp());
             Statement.setString(2, plat);
-            Statement.setString(3, p.getNamaPemesan());
-            Statement.setString(4, p.getNoTelpPemesan());
+            Statement.setInt(3, idSupir);
+            Statement.setString(4, p.getNamaPemesan());
+            Statement.setString(5, p.getNoTelpPemesan());
+            Statement.setDouble(6, 0);
             Statement.executeUpdate();
         } catch (SQLException ex) {
             ex.printStackTrace();
@@ -97,15 +100,40 @@ public class ConPemesan {
         List<Pemesan> lm = null;
         try {
             lm = new ArrayList<Pemesan>();
-            PreparedStatement Statement = koneksi.prepareStatement("select * from mobil where plat=?");
+            PreparedStatement Statement = koneksi.prepareStatement("select * from pemesan where plat=?");
             Statement.setString(1, plat);
             ResultSet rs = Statement.executeQuery();
             while (rs.next()) {
-                Pemesan m = new Pemesan();
-                m.setNamaPemesan(rs.getString("namaPemesan"));
-                m.setNoKtp(rs.getString("noKtp"));
-                m.setNoTelpPemesan(rs.getString("noTelpPemesan"));
-                lm.add(m);
+                Pemesan p = new Pemesan();
+                p.setNamaPemesan(rs.getString("namaPemesan"));
+                p.setPlat(rs.getString("plat"));
+                p.setidSupir(rs.getInt("idSupir"));
+                p.setNoKtp(rs.getString("noKtp"));
+                p.setNoTelpPemesan(rs.getString("noTelpPemesan"));
+                lm.add(p);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(ConMobil.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return lm;
+
+    }
+    
+    public List<Pemesan> getPemesananbyID(String plat) {
+        List<Pemesan> lm = null;
+        try {
+            lm = new ArrayList<Pemesan>();
+            PreparedStatement Statement = koneksi.prepareStatement("select * from pemesan where noKtp=?");
+            Statement.setString(1, plat);
+            ResultSet rs = Statement.executeQuery();
+            while (rs.next()) {
+                Pemesan p = new Pemesan();
+                p.setNamaPemesan(rs.getString("namaPemesan"));
+                p.setPlat(rs.getString("plat"));
+                p.setidSupir(rs.getInt("idSupir"));
+                p.setNoKtp(rs.getString("noKtp"));
+                p.setNoTelpPemesan(rs.getString("noTelpPemesan"));
+                lm.add(p);
             }
         } catch (SQLException ex) {
             Logger.getLogger(ConMobil.class.getName()).log(Level.SEVERE, null, ex);

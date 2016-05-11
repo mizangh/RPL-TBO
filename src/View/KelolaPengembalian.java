@@ -5,6 +5,10 @@
  */
 package View;
 
+import Controller.*;
+import Model.*;
+import java.util.List;
+
 /**
  *
  * @author gggggggggggggggggggg
@@ -31,18 +35,8 @@ public class KelolaPengembalian extends javax.swing.JFrame {
         pic_kelolapengembalian = new javax.swing.JLabel();
         lbl_datamobil = new javax.swing.JLabel();
         lbl_nopolisi = new javax.swing.JLabel();
-        txt_nopolisi = new javax.swing.JTextField();
-        lbl_nmpeminjam = new javax.swing.JLabel();
-        lbl_tglpeminjam = new javax.swing.JLabel();
-        lbl_tglpengembalian = new javax.swing.JLabel();
-        lbl_lmpeminjam = new javax.swing.JLabel();
-        lbl_harga = new javax.swing.JLabel();
-        lbl_nama = new javax.swing.JLabel();
+        txtKTP = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        lbl_tglpinjam = new javax.swing.JLabel();
-        lbl_tglkembali = new javax.swing.JLabel();
-        lbl_lmpinjam = new javax.swing.JLabel();
-        lbl_hargaperhari = new javax.swing.JLabel();
         btn_kembalikanmobil = new javax.swing.JButton();
         btn_home = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
@@ -52,43 +46,27 @@ public class KelolaPengembalian extends javax.swing.JFrame {
         bg_white.setBackground(new java.awt.Color(255, 255, 255));
 
         lbl_datamobil.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
-        lbl_datamobil.setText("DATA MOBIL");
+        lbl_datamobil.setText("PENGEMBALIAN");
 
         lbl_nopolisi.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lbl_nopolisi.setText("No.Polisi/Plat");
+        lbl_nopolisi.setText("NO KTP Pemesan");
 
-        lbl_nmpeminjam.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lbl_nmpeminjam.setText("Nama Peminjam");
-
-        lbl_tglpeminjam.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lbl_tglpeminjam.setText("Tanggal Peminjaman");
-
-        lbl_tglpengembalian.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lbl_tglpengembalian.setText("Tanggal Pengembalian");
-
-        lbl_lmpeminjam.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lbl_lmpeminjam.setText("Lama Peminjaman");
-
-        lbl_harga.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lbl_harga.setText("Harga /perhari");
-
-        lbl_nama.setText("lbl-nama");
-
-        lbl_tglpinjam.setText("lbl-tglpinjam");
-
-        lbl_tglkembali.setText("lbl-tglkembali");
-
-        lbl_lmpinjam.setText("lbl-lmpinjam");
-
-        lbl_hargaperhari.setText("lbl-harga");
+        txtKTP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtKTPActionPerformed(evt);
+            }
+        });
 
         btn_kembalikanmobil.setBackground(new java.awt.Color(255, 255, 255));
-        btn_kembalikanmobil.setIcon(new javax.swing.ImageIcon("D:\\Documents\\NetBeansProjects\\RPL-TBO-branch\\src\\assets\\arrow_right.png")); // NOI18N
         btn_kembalikanmobil.setText("Kembalkan Mobil");
         btn_kembalikanmobil.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btn_kembalikanmobil.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_kembalikanmobilActionPerformed(evt);
+            }
+        });
 
         btn_home.setBackground(new java.awt.Color(255, 255, 255));
-        btn_home.setIcon(new javax.swing.ImageIcon("D:\\Documents\\NetBeansProjects\\RPL-TBO-branch\\src\\assets\\home (1).jpg")); // NOI18N
         btn_home.setText("Home");
         btn_home.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btn_home.addActionListener(new java.awt.event.ActionListener() {
@@ -96,8 +74,6 @@ public class KelolaPengembalian extends javax.swing.JFrame {
                 btn_homeActionPerformed(evt);
             }
         });
-
-        jLabel1.setIcon(new javax.swing.ImageIcon("D:\\Documents\\NetBeansProjects\\RPL-TBO-branch\\src\\assets\\Kelola pengembalian.jpg")); // NOI18N
 
         javax.swing.GroupLayout bg_whiteLayout = new javax.swing.GroupLayout(bg_white);
         bg_white.setLayout(bg_whiteLayout);
@@ -114,26 +90,13 @@ public class KelolaPengembalian extends javax.swing.JFrame {
                             .addComponent(jLabel3)))
                     .addGroup(bg_whiteLayout.createSequentialGroup()
                         .addGap(85, 85, 85)
-                        .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(lbl_tglpengembalian)
-                                .addComponent(lbl_tglpeminjam)
-                                .addComponent(lbl_nmpeminjam)
-                                .addComponent(lbl_nopolisi)
-                                .addComponent(lbl_lmpeminjam)
-                                .addComponent(lbl_harga))
-                            .addGroup(bg_whiteLayout.createSequentialGroup()
-                                .addComponent(lbl_datamobil)
-                                .addGap(43, 43, 43)))
-                        .addGap(25, 25, 25)
-                        .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbl_tglpinjam)
-                            .addComponent(lbl_lmpinjam)
-                            .addComponent(lbl_tglkembali)
-                            .addComponent(lbl_hargaperhari)
-                            .addComponent(lbl_nama)
-                            .addComponent(txt_nopolisi, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(227, Short.MAX_VALUE))
+                        .addComponent(lbl_datamobil))
+                    .addGroup(bg_whiteLayout.createSequentialGroup()
+                        .addGap(100, 100, 100)
+                        .addComponent(lbl_nopolisi)
+                        .addGap(93, 93, 93)
+                        .addComponent(txtKTP, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(196, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bg_whiteLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btn_home, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -155,31 +118,11 @@ public class KelolaPengembalian extends javax.swing.JFrame {
                     .addGroup(bg_whiteLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(lbl_datamobil)))
-                .addGap(18, 18, 18)
+                .addGap(60, 60, 60)
                 .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl_nopolisi)
-                    .addComponent(txt_nopolisi, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl_nmpeminjam)
-                    .addComponent(lbl_nama))
-                .addGap(18, 18, 18)
-                .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl_tglpeminjam)
-                    .addComponent(lbl_tglpinjam))
-                .addGap(18, 18, 18)
-                .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl_tglpengembalian)
-                    .addComponent(lbl_tglkembali))
-                .addGap(18, 18, 18)
-                .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl_lmpeminjam)
-                    .addComponent(lbl_lmpinjam))
-                .addGap(18, 18, 18)
-                .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl_harga)
-                    .addComponent(lbl_hargaperhari))
-                .addGap(18, 18, 18)
+                    .addComponent(txtKTP, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_nopolisi))
+                .addGap(141, 141, 141)
                 .addGroup(bg_whiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_home, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btn_kembalikanmobil, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -190,13 +133,15 @@ public class KelolaPengembalian extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(bg_white, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(0, 0, 0))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(bg_white, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(bg_white, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 22, Short.MAX_VALUE))
         );
 
         pack();
@@ -207,6 +152,30 @@ public class KelolaPengembalian extends javax.swing.JFrame {
     Home a = new Home();
     a.show();  // TODO add your handling code here:
     }//GEN-LAST:event_btn_homeActionPerformed
+
+    private void txtKTPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtKTPActionPerformed
+                        // TODO add your handling code here:
+    }//GEN-LAST:event_txtKTPActionPerformed
+
+    private void btn_kembalikanmobilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_kembalikanmobilActionPerformed
+        String noktp = txtKTP.getText();
+        Supir s = new Supir();
+        Mobil m = new Mobil();
+        ConMobil cm = new ConMobil();
+        ConSupir cs = new ConSupir();
+        ConPemesan cp = new ConPemesan();
+        List<Pemesan> lp = cp.getPemesananbyID(noktp);
+        String plat = lp.get(0).getPlat();
+        int idSupir = lp.get(0).getidSupir();
+        cm.updateStatMobilkembali(plat);
+        if(idSupir != 0){
+        s.setIdSupir(idSupir);
+        s.setStatus(false);
+        cs.updateSupirSQL(s);
+        }
+        
+// TODO add your handling code here:
+    }//GEN-LAST:event_btn_kembalikanmobilActionPerformed
 
     /**
      * @param args the command line arguments
@@ -251,18 +220,8 @@ public class KelolaPengembalian extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel lbl_datamobil;
-    private javax.swing.JLabel lbl_harga;
-    private javax.swing.JLabel lbl_hargaperhari;
-    private javax.swing.JLabel lbl_lmpeminjam;
-    private javax.swing.JLabel lbl_lmpinjam;
-    private javax.swing.JLabel lbl_nama;
-    private javax.swing.JLabel lbl_nmpeminjam;
     private javax.swing.JLabel lbl_nopolisi;
-    private javax.swing.JLabel lbl_tglkembali;
-    private javax.swing.JLabel lbl_tglpeminjam;
-    private javax.swing.JLabel lbl_tglpengembalian;
-    private javax.swing.JLabel lbl_tglpinjam;
     private javax.swing.JLabel pic_kelolapengembalian;
-    private javax.swing.JTextField txt_nopolisi;
+    private javax.swing.JTextField txtKTP;
     // End of variables declaration//GEN-END:variables
 }

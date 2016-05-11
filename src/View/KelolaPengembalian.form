@@ -23,7 +23,7 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
+          <Group type="102" alignment="1" attributes="0">
               <Component id="bg_white" max="32767" attributes="0"/>
               <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
           </Group>
@@ -31,7 +31,10 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="bg_white" alignment="0" min="-2" max="-2" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="bg_white" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="22" max="32767" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -59,32 +62,16 @@
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                                  <Component id="lbl_tglpengembalian" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lbl_tglpeminjam" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lbl_nmpeminjam" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lbl_nopolisi" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lbl_lmpeminjam" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lbl_harga" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="lbl_datamobil" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="lbl_tglpinjam" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbl_lmpinjam" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbl_tglkembali" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbl_hargaperhari" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbl_nama" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="txt_nopolisi" alignment="0" min="-2" pref="183" max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="lbl_datamobil" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
+                          <Component id="lbl_nopolisi" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
+                          <Component id="txtKTP" min="-2" pref="183" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="227" max="32767" attributes="0"/>
+                  <EmptySpace pref="196" max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
@@ -113,37 +100,12 @@
                           <Component id="lbl_datamobil" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="txtKTP" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                       <Component id="lbl_nopolisi" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txt_nopolisi" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lbl_nmpeminjam" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="lbl_nama" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lbl_tglpeminjam" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="lbl_tglpinjam" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lbl_tglpengembalian" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="lbl_tglkembali" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lbl_lmpeminjam" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="lbl_lmpinjam" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lbl_harga" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="lbl_hargaperhari" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="141" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="btn_home" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
                       <Component id="btn_kembalikanmobil" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
@@ -161,7 +123,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="20" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="DATA MOBIL"/>
+            <Property name="text" type="java.lang.String" value="PENGEMBALIAN"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lbl_nopolisi">
@@ -169,85 +131,20 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="14" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="No.Polisi/Plat"/>
+            <Property name="text" type="java.lang.String" value="NO KTP Pemesan"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txt_nopolisi">
-        </Component>
-        <Component class="javax.swing.JLabel" name="lbl_nmpeminjam">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="14" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Nama Peminjam"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="lbl_tglpeminjam">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="14" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Tanggal Peminjaman"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="lbl_tglpengembalian">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="14" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Tanggal Pengembalian"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="lbl_lmpeminjam">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="14" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Lama Peminjaman"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="lbl_harga">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="14" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Harga /perhari"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="lbl_nama">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="lbl-nama"/>
-          </Properties>
+        <Component class="javax.swing.JTextField" name="txtKTP">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtKTPActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel3">
-        </Component>
-        <Component class="javax.swing.JLabel" name="lbl_tglpinjam">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="lbl-tglpinjam"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="lbl_tglkembali">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="lbl-tglkembali"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="lbl_lmpinjam">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="lbl-lmpinjam"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="lbl_hargaperhari">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="lbl-harga"/>
-          </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="btn_kembalikanmobil">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
-            </Property>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="D:\Documents\NetBeansProjects\RPL-TBO-branch\src\assets\arrow_right.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Kembalkan Mobil"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -256,14 +153,14 @@
               </Border>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_kembalikanmobilActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btn_home">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
-            </Property>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="D:\Documents\NetBeansProjects\RPL-TBO-branch\src\assets\home (1).jpg"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Home"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -277,11 +174,6 @@
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel1">
-          <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="D:\Documents\NetBeansProjects\RPL-TBO-branch\src\assets\Kelola pengembalian.jpg"/>
-            </Property>
-          </Properties>
         </Component>
       </SubComponents>
     </Container>

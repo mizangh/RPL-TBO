@@ -5,6 +5,7 @@
  */
 package Controller;
 
+import Connection.Koneksi;
 import Model.Mobil;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -129,6 +130,27 @@ public class ConMobil {
             }
         }
     }
+    
+    public void updateStatMobilkembali(String plat) {
+        PreparedStatement Statement = null;
+        try {
+            Statement = koneksi.prepareStatement("update mobil set Status=? where plat=? ");
+            Statement.setBoolean(1, false);
+            Statement.setString(2, plat);
+            Statement.executeUpdate();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        } finally {
+            if (Statement != null) {
+                try {
+
+                    Statement.close();
+                } catch (SQLException ex) {
+                    Logger.getLogger(ConMobil.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        }
+    }
 
     public void deleteMobilSQL(String plat) {
         PreparedStatement Statement = null;
@@ -155,6 +177,28 @@ public class ConMobil {
         try {
             lm = new ArrayList<Mobil>();
             PreparedStatement Statement = koneksi.prepareStatement("select * from mobil where jenisMobil=? and Status=0");
+            Statement.setString(1, Jenis);
+            ResultSet rs = Statement.executeQuery();
+            while (rs.next()) {
+                Mobil m = new Mobil();
+                m.setPlat(rs.getString("plat"));
+                m.setJenisMobil(rs.getString("jenisMobil"));
+                m.setHarga(rs.getInt("harga"));
+                m.setStatus(rs.getBoolean("Status"));
+                lm.add(m);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(ConMobil.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return lm;
+
+    }
+    
+    public List<Mobil> getMobilSQLbyID(String Jenis) {
+        List<Mobil> lm = null;
+        try {
+            lm = new ArrayList<Mobil>();
+            PreparedStatement Statement = koneksi.prepareStatement("select * from mobil where plat=?");
             Statement.setString(1, Jenis);
             ResultSet rs = Statement.executeQuery();
             while (rs.next()) {

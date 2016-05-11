@@ -5,6 +5,7 @@
  */
 package Controller;
 
+import Connection.Koneksi;
 import Model.Supir;
 import Model.Transaksi;
 import java.sql.Connection;

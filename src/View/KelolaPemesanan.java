@@ -7,7 +7,12 @@ package View;
 
 import Controller.ConMobil;
 import Controller.ConPemesan;
+import Controller.ConSupir;
+import Model.App;
 import Model.Pemesan;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -71,6 +76,9 @@ public class KelolaPemesanan extends javax.swing.JFrame {
         btnHome = new javax.swing.JButton();
         pic_kelolapemesanan1 = new javax.swing.JLabel();
         txtNoKtp = new javax.swing.JTextField();
+        lbl_nohp2 = new javax.swing.JLabel();
+        SprYa = new javax.swing.JRadioButton();
+        SprTdk = new javax.swing.JRadioButton();
 
         bg_white.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -125,16 +133,12 @@ public class KelolaPemesanan extends javax.swing.JFrame {
         lbl_total.setText("Total");
 
         btn_submit.setBackground(new java.awt.Color(255, 255, 255));
-        btn_submit.setIcon(new javax.swing.ImageIcon("D:\\Documents\\NetBeansProjects\\RPL-TBO-branch\\src\\assets\\arrow_right.png")); // NOI18N
         btn_submit.setText("Submit");
         btn_submit.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         btn_home.setBackground(new java.awt.Color(255, 255, 255));
-        btn_home.setIcon(new javax.swing.ImageIcon("D:\\Documents\\NetBeansProjects\\RPL-TBO-branch\\src\\assets\\home (1).jpg")); // NOI18N
         btn_home.setText("Home");
         btn_home.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        pic_kelolapemesanan.setIcon(new javax.swing.ImageIcon("D:\\Documents\\NetBeansProjects\\RPL-TBO-branch\\src\\assets\\Kelola Pemesanan.jpg")); // NOI18N
 
         txt_noktp1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -293,7 +297,6 @@ public class KelolaPemesanan extends javax.swing.JFrame {
         txtTotal.setText("Total");
 
         btnSubmit.setBackground(new java.awt.Color(255, 255, 255));
-        btnSubmit.setIcon(new javax.swing.ImageIcon("D:\\Documents\\NetBeansProjects\\RPL-TBO-branch\\src\\assets\\arrow_right.png")); // NOI18N
         btnSubmit.setText("Submit");
         btnSubmit.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
@@ -303,7 +306,6 @@ public class KelolaPemesanan extends javax.swing.JFrame {
         });
 
         btnHome.setBackground(new java.awt.Color(255, 255, 255));
-        btnHome.setIcon(new javax.swing.ImageIcon("D:\\Documents\\NetBeansProjects\\RPL-TBO-branch\\src\\assets\\home (1).jpg")); // NOI18N
         btnHome.setText("Home");
         btnHome.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnHome.addActionListener(new java.awt.event.ActionListener() {
@@ -312,7 +314,12 @@ public class KelolaPemesanan extends javax.swing.JFrame {
             }
         });
 
-        pic_kelolapemesanan1.setIcon(new javax.swing.ImageIcon("D:\\Documents\\NetBeansProjects\\RPL-TBO-branch\\src\\assets\\Kelola Pemesanan.jpg")); // NOI18N
+        lbl_nohp2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbl_nohp2.setText("Supir");
+
+        SprYa.setText("Ya");
+
+        SprTdk.setText("Tidak");
 
         javax.swing.GroupLayout bg_white1Layout = new javax.swing.GroupLayout(bg_white1);
         bg_white1.setLayout(bg_white1Layout);
@@ -348,7 +355,8 @@ public class KelolaPemesanan extends javax.swing.JFrame {
                                     .addComponent(lbl_noktp1)
                                     .addComponent(lbl_nohp1)
                                     .addComponent(lbl_durasi1)
-                                    .addComponent(lbl_jenismobil1))
+                                    .addComponent(lbl_jenismobil1)
+                                    .addComponent(lbl_nohp2))
                                 .addGap(68, 68, 68)))
                         .addGroup(bg_white1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(cmbJenisMobil, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -359,7 +367,11 @@ public class KelolaPemesanan extends javax.swing.JFrame {
                             .addComponent(txtNoHp, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtNamaPelanggan, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtNoKtp, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtTotal))
+                            .addComponent(txtTotal)
+                            .addGroup(bg_white1Layout.createSequentialGroup()
+                                .addComponent(SprYa)
+                                .addGap(18, 18, 18)
+                                .addComponent(SprTdk)))
                         .addGap(117, 117, 117)))
                 .addComponent(btnSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(196, 196, 196))
@@ -390,6 +402,13 @@ public class KelolaPemesanan extends javax.swing.JFrame {
                         .addGroup(bg_white1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(txtNoHp, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lbl_nohp1))
+                        .addGap(18, 18, 18)
+                        .addComponent(lbl_nohp2))
+                    .addGroup(bg_white1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(SprYa)
+                        .addComponent(SprTdk)))
+                .addGroup(bg_white1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bg_white1Layout.createSequentialGroup()
                         .addGroup(bg_white1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(bg_white1Layout.createSequentialGroup()
                                 .addGap(30, 30, 30)
@@ -398,19 +417,21 @@ public class KelolaPemesanan extends javax.swing.JFrame {
                                 .addGap(31, 31, 31)
                                 .addComponent(lbl_perhari1)))
                         .addGap(8, 8, 8))
-                    .addComponent(cmbDurasi, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(bg_white1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bg_white1Layout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addComponent(cmbDurasi, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(20, 20, 20)
+                .addGroup(bg_white1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_jenismobil1)
                     .addComponent(cmbJenisMobil, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
                 .addGroup(bg_white1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(bg_white1Layout.createSequentialGroup()
-                        .addComponent(lbl_totbiaya1)
-                        .addGap(405, 405, 405)
+                        .addGap(422, 422, 422)
                         .addComponent(jLabel14))
                     .addGroup(bg_white1Layout.createSequentialGroup()
-                        .addComponent(txtTotal)
+                        .addGroup(bg_white1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtTotal)
+                            .addComponent(lbl_totbiaya1))
                         .addGap(7, 7, 7)
                         .addGroup(bg_white1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnHome, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -471,20 +492,38 @@ public class KelolaPemesanan extends javax.swing.JFrame {
         String noKtp = txtNoKtp.getText();
         String noHp = txtNoHp.getText();
         Pemesan p = new Pemesan();
+        App app = new App();
+
         p.setNamaPemesan(nama);
         p.setNoKtp(noKtp);
         p.setNoTelpPemesan(noHp);
+
         ConMobil cm = new ConMobil();
         ConPemesan cp = new ConPemesan();
+        ConSupir cs = new ConSupir();
         String plat = cm.getMobilSQL(cmbJenisMobil.getSelectedItem().toString()).get(0).getPlat();
-        cp.insertPemesanSQL(p, plat);
+        try {
+            app.setDaftar(cm.getMobilSQL(cmbJenisMobil.getSelectedItem().toString()).get(0).getPlat());
+            app.saveData();
+        } catch (IOException ex) {
+            Logger.getLogger(KelolaPemesanan.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        Integer idSpr = 0;
+        if(SprYa.isSelected()){
+            idSpr = cs.getSupirSQL().get(0).getIdSupir();
+            cs.updateStatSupir(idSpr);
+        }else if(SprTdk.isSelected()){
+            idSpr = 0;
+        }
+
+        cp.insertPemesanSQL(p, plat, idSpr);
         cm.updateStatMobil(plat);
     }//GEN-LAST:event_btnSubmitActionPerformed
 
     private void cmbDurasiItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cmbDurasiItemStateChanged
         // TODO add your handling code here:
         ConMobil cm = new ConMobil();
-        int an =  (int)(cmbDurasi.getSelectedItem()) * cm.getMobilSQL(cmbJenisMobil.getSelectedItem().toString()).get(0).getHarga();
+        int an = (int) (cmbDurasi.getSelectedItem()) * cm.getMobilSQL(cmbJenisMobil.getSelectedItem().toString()).get(0).getHarga();
         txtTotal.setText(Integer.toString(an));
     }//GEN-LAST:event_cmbDurasiItemStateChanged
 
@@ -527,6 +566,8 @@ public class KelolaPemesanan extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JRadioButton SprTdk;
+    private javax.swing.JRadioButton SprYa;
     private javax.swing.JPanel bg_white;
     private javax.swing.JPanel bg_white1;
     private javax.swing.JButton btnHome;
@@ -547,6 +588,7 @@ public class KelolaPemesanan extends javax.swing.JFrame {
     private javax.swing.JLabel lbl_nmpelanggan1;
     private javax.swing.JLabel lbl_nohp;
     private javax.swing.JLabel lbl_nohp1;
+    private javax.swing.JLabel lbl_nohp2;
     private javax.swing.JLabel lbl_noktp;
     private javax.swing.JLabel lbl_noktp1;
     private javax.swing.JLabel lbl_perhari;

@@ -5,12 +5,15 @@
  */
 package Controller;
 
+import Connection.Koneksi;
 import Model.Mobil;
 import Model.Supir;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -65,7 +68,7 @@ public class ConSupir {
             Statement.setString(1, s.getNoTelp());
             Statement.setString(2, s.getNamaSupir());
             Statement.setDouble(3, s.getHargaSupir());
-            Statement.setBoolean(4, s.getStatus());
+            Statement.setBoolean(4, false);
             Statement.executeUpdate();
         } catch (SQLException ex) {
             ex.printStackTrace();
@@ -87,7 +90,7 @@ public class ConSupir {
             Statement.setString(1, s.getNoTelp());
             Statement.setString(2, s.getNamaSupir());
             Statement.setDouble(3, s.getHargaSupir());
-            Statement.setBoolean(4, true);
+            Statement.setBoolean(4, s.getStatus());
             Statement.setInt(5, s.getIdSupir());
             Statement.executeUpdate();
         } catch (SQLException ex) {
@@ -120,6 +123,70 @@ public class ConSupir {
                 }
             }
         }
+    }
+    
+    public void updateStatSupir(int idSupir) {
+        PreparedStatement Statement = null;
+        try {
+            Statement = koneksi.prepareStatement("update supir set Status=? where idSupir=? ");
+            Statement.setBoolean(1, true);
+            Statement.setInt(2, idSupir);
+            Statement.executeUpdate();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        } finally {
+            if (Statement != null) {
+                try {
+
+                    Statement.close();
+                } catch (SQLException ex) {
+                    Logger.getLogger(ConMobil.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        }
+    }
+    
+    public List<Supir> getSupirSQL() {
+        List<Supir> lm = null;
+        try {
+            lm = new ArrayList<Supir>();
+            PreparedStatement Statement = koneksi.prepareStatement("select * from supir where status=0");
+            ResultSet rs = Statement.executeQuery();
+            while (rs.next()) {
+                Supir m = new Supir();
+                m.setIdSupir(rs.getInt("idSupir"));
+                m.setNamaSupir(rs.getString("namaSupir"));
+                m.setNoTelp(rs.getString("noTelp"));
+                m.setHargaSupir(rs.getInt("hargaSupir"));
+                lm.add(m);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(ConMobil.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return lm;
+
+    }
+    
+    public List<Supir> getSupirSQLbyID(int idSupir) {
+        List<Supir> lm = null;
+        try {
+            lm = new ArrayList<Supir>();
+            PreparedStatement Statement = koneksi.prepareStatement("select * from supir where idSupir=?");
+            Statement.setInt(1, idSupir);
+            ResultSet rs = Statement.executeQuery();
+            while (rs.next()) {
+                Supir m = new Supir();
+                m.setIdSupir(rs.getInt("idSupir"));
+                m.setNamaSupir(rs.getString("namaSupir"));
+                m.setNoTelp(rs.getString("noTelp"));
+                m.setHargaSupir(rs.getInt("hargaSupir"));
+                lm.add(m);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(ConMobil.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return lm;
+
     }
 
 }

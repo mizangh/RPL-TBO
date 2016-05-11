@@ -5,6 +5,7 @@
         <group>
             <file>file:/C:/Users/mizannn/Desktop/Rental%20Mobil/src/Controller/ConTransaksi.java</file>
             <file>file:/C:/Users/mizannn/Desktop/Rental%20Mobil/src/Controller/ConPemesan.java</file>
+            <file>file:/C:/Users/mizannn/Desktop/Rental%20Mobil/src/View/Transaksi.java</file>
             <file>file:/C:/Users/mizannn/Desktop/Rental%20Mobil/src/View/KelolaPemesanan.java</file>
             <file>file:/C:/Users/mizannn/Desktop/Rental%20Mobil/src/Controller/Koneksi.java</file>
             <file>file:/C:/Users/mizannn/Desktop/Rental%20Mobil/src/View/KelolaMobil.java</file>
@@ -14,6 +15,7 @@
             <file>file:/C:/Users/mizannn/Desktop/Rental%20Mobil/src/Model/Transaksi.java</file>
             <file>file:/C:/Users/mizannn/Desktop/Rental%20Mobil/src/Model/Supir.java</file>
             <file>file:/C:/Users/mizannn/Desktop/Rental%20Mobil/src/View/KelolaSupir.java</file>
+            <file>file:/C:/Users/mizannn/Desktop/Rental%20Mobil/src/View/Report.java</file>
             <file>file:/C:/Users/mizannn/Desktop/Rental%20Mobil/src/Controller/ConSupir.java</file>
             <file>file:/C:/Users/mizannn/Desktop/Rental%20Mobil/src/View/Console.java</file>
         </group>

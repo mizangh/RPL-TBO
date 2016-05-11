@@ -6,7 +6,9 @@
 package View;
 
 import Controller.ConMobil;
+import Model.App;
 import Model.Mobil;
+import java.io.IOException;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -17,10 +19,9 @@ import java.util.List;
  */
 public class Console {
 
-    public static void main(String[] args) {
-        //Mobil Tes
-        ConMobil cM = new ConMobil();
-        Mobil m = new Mobil("Innova", "D1234HD", 120000);
-        cM.updateStatMobil("D1234HD");
+    public static void main(String[] args) throws IOException{
+       App app = new App();
+       app.setDaftar("");
+       app.saveData();
     }
 }

@@ -14,6 +14,8 @@ public class Pemesan {
     private String noKtp;
     private String namaPemesan;
     private String noHP;
+    private String Plat;
+    private int idSupir;
 
     public Pemesan() {
 
@@ -24,7 +26,23 @@ public class Pemesan {
         this.namaPemesan = namaPemesan;
         this.noHP = noTelpPemesan;
     }
-
+    
+    public void setPlat(String Plat){
+        this.Plat = Plat;
+    }
+    
+    public String getPlat(){
+        return Plat;
+    }
+    
+    public void setidSupir(int idSupir){
+        this.idSupir = idSupir;
+    }
+    
+    public int getidSupir(){
+        return idSupir;
+    }
+    
     public String getNoKtp() {
         return noKtp;
     }
