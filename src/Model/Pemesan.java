@@ -16,6 +16,8 @@ public class Pemesan {
     private String noHP;
     private String Plat;
     private int idSupir;
+    private double Total;
+    private int Hari;
 
     public Pemesan() {
 
@@ -25,6 +27,22 @@ public class Pemesan {
         this.noKtp = id_pemesan;
         this.namaPemesan = namaPemesan;
         this.noHP = noTelpPemesan;
+    }
+
+    public int getHari() {
+        return Hari;
+    }
+
+    public void setHari(int Hari) {
+        this.Hari = Hari;
+    }
+    
+    public void setTotal(double Total){
+        this.Total = Total;
+    }
+    
+    public double getTotal(){
+        return Total;
     }
     
     public void setPlat(String Plat){

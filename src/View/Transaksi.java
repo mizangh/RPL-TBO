@@ -277,6 +277,8 @@ public class Transaksi extends javax.swing.JFrame {
             }else{
                lblSupir.setText("Tanpa Supir");
             }
+            lblLamaPinjam.setText(Integer.toString(lp.get(0).getHari()));
+            lblTotalBiaya.setText(Double.toString(lp.get(0).getTotal()));
             lblJenisMobil.setText(lm.get(0).getJenisMobil());
             lblNama.setText(lp.get(0).getNamaPemesan());
             lblNoKtp.setText(lp.get(0).getNoKtp());

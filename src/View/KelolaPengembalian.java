@@ -169,9 +169,8 @@ public class KelolaPengembalian extends javax.swing.JFrame {
         int idSupir = lp.get(0).getidSupir();
         cm.updateStatMobilkembali(plat);
         if(idSupir != 0){
-        s.setIdSupir(idSupir);
-        s.setStatus(false);
-        cs.updateSupirSQL(s);
+        cs.updateStatMobilkembali(idSupir);
+        
         }
         
 // TODO add your handling code here:

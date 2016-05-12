@@ -35,13 +35,14 @@ public class ConPemesan {
     public void insertPemesanSQL(Pemesan p, String plat, Integer idSupir) {
         PreparedStatement Statement = null;
         try {
-            Statement = koneksi.prepareStatement("insert into pemesan (noKtp,plat,idSupir,namaPemesan,noTelpPemesan,Total) values (?,?,?,?,?,?)");
+            Statement = koneksi.prepareStatement("insert into pemesan (noKtp,plat,idSupir,namaPemesan,noTelpPemesan,Total,lama) values (?,?,?,?,?,?,?)");
             Statement.setString(1, p.getNoKtp());
             Statement.setString(2, plat);
             Statement.setInt(3, idSupir);
             Statement.setString(4, p.getNamaPemesan());
             Statement.setString(5, p.getNoTelpPemesan());
-            Statement.setDouble(6, 0);
+            Statement.setDouble(6, p.getTotal());
+            Statement.setInt(7, p.getHari());
             Statement.executeUpdate();
         } catch (SQLException ex) {
             ex.printStackTrace();
@@ -110,6 +111,8 @@ public class ConPemesan {
                 p.setidSupir(rs.getInt("idSupir"));
                 p.setNoKtp(rs.getString("noKtp"));
                 p.setNoTelpPemesan(rs.getString("noTelpPemesan"));
+                p.setTotal(rs.getDouble("Total"));
+                p.setHari(rs.getInt("lama"));
                 lm.add(p);
             }
         } catch (SQLException ex) {
@@ -133,6 +136,8 @@ public class ConPemesan {
                 p.setidSupir(rs.getInt("idSupir"));
                 p.setNoKtp(rs.getString("noKtp"));
                 p.setNoTelpPemesan(rs.getString("noTelpPemesan"));
+                p.setTotal(rs.getDouble("Total"));
+                p.setHari(rs.getInt("lama"));
                 lm.add(p);
             }
         } catch (SQLException ex) {

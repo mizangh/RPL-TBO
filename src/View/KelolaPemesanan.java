@@ -515,9 +515,15 @@ public class KelolaPemesanan extends javax.swing.JFrame {
         }else if(SprTdk.isSelected()){
             idSpr = 0;
         }
+        p.setTotal(Double.valueOf(txtTotal.getText()));
+        p.setHari(cmbDurasi.getSelectedIndex()+1);
 
         cp.insertPemesanSQL(p, plat, idSpr);
         cm.updateStatMobil(plat);
+        this.dispose();
+        this.setVisible(false);
+        Transaksi t = new Transaksi();
+        t.setVisible(true);
     }//GEN-LAST:event_btnSubmitActionPerformed
 
     private void cmbDurasiItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cmbDurasiItemStateChanged

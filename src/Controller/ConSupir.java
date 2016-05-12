@@ -82,6 +82,27 @@ public class ConSupir {
             }
         }
     }
+    
+    public void updateStatMobilkembali(int plat) {
+        PreparedStatement Statement = null;
+        try {
+            Statement = koneksi.prepareStatement("update supir set status=? where idSupir=? ");
+            Statement.setBoolean(1, false);
+            Statement.setInt(2, plat);
+            Statement.executeUpdate();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        } finally {
+            if (Statement != null) {
+                try {
+
+                    Statement.close();
+                } catch (SQLException ex) {
+                    Logger.getLogger(ConMobil.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        }
+    }
 
     public void updateSupirSQL(Supir s) {
         PreparedStatement Statement = null;

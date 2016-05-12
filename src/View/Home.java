@@ -299,10 +299,11 @@ public class Home extends javax.swing.JFrame {
 
     private void btnKelolaPengembalianActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKelolaPengembalianActionPerformed
         // TODO add your handling code here:
-        this.hide();
+        this.dispose();
         bg_white1.removeAll();
         KelolaPengembalian kpe = new KelolaPengembalian();
         kpe.setVisible(true);
+        
         bg_white1.add(kpe);
     }//GEN-LAST:event_btnKelolaPengembalianActionPerformed
 
@@ -313,7 +314,7 @@ public class Home extends javax.swing.JFrame {
 
     private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
         // TODO add your handling code here:
-        dispose();
+        this.dispose();
         Login Lg = new Login();
         Lg.setVisible(true);
     }//GEN-LAST:event_btnLogoutActionPerformed
