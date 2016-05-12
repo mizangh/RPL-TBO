@@ -523,7 +523,7 @@ public class KelolaPemesanan extends javax.swing.JFrame {
     private void cmbDurasiItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cmbDurasiItemStateChanged
         // TODO add your handling code here:
         ConMobil cm = new ConMobil();
-        int an = (int) (cmbDurasi.getSelectedItem()) * cm.getMobilSQL(cmbJenisMobil.getSelectedItem().toString()).get(0).getHarga();
+        int an = (cmbDurasi.getSelectedIndex()+1)*  cm.getMobilSQL(cmbJenisMobil.getSelectedItem().toString()).get(0).getHarga();
         txtTotal.setText(Integer.toString(an));
     }//GEN-LAST:event_cmbDurasiItemStateChanged
 
